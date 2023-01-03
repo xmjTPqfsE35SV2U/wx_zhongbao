@@ -1,0 +1,8 @@
+<!--components/tabbar/tabbar.wxml-->
+<van-tabbar fixed active-color="#0777DE" inactive-color="#000" active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="wap-home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="orders-o">项目</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">达人</van-tabbar-item>
+  <van-tabbar-item icon="user-circle-o">我</van-tabbar-item>
+</van-tabbar>
+

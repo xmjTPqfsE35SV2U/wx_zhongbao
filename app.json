@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/register/register",
+    "pages/project/project",
+    "pages/talent/talent",
+    "pages/person/person",
+    "components/tabbar/tabbar",
+    "pages/personRealName/personRealName",
+    "pages/biddingProjects/biddingProjects",
+    "pages/projectStatus/projectStatus",
+    "pages/accountManagement/accountManagement",
+    "pages/feedBack/feedBack"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#0777DE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/index.png",
+        "selectedIconPath": "/image/index1.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "/image/project.png",
+        "selectedIconPath": "/image/project1.png"
+      },
+      {
+        "pagePath": "pages/talent/talent",
+        "text": "达人",
+        "iconPath": "/image/talent.png",
+        "selectedIconPath": "/image/talent1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我",
+        "iconPath": "/image/person.png",
+        "selectedIconPath": "/image/person1.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-field": "@vant/weapp/field/index"
+  }
+}

@@ -1,0 +1,25 @@
+<!--pages/personRealName/personRealName.wxml-->
+<view>
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">姓名：</view>
+    <van-field
+      value="{{ value }}"
+      placeholder="请输入用户名"
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+  </view>
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">身份证号码：</view>
+    <van-field
+      value="{{ value }}"
+      placeholder="请输入身份证号码"
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+  </view>
+  <view class="margin-l-32 margin-r-32 flex-row h-100 ln-h-100">
+    身份证正反面：
+  </view>
+</view>
+

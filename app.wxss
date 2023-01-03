@@ -1,0 +1,181 @@
+/**app.wxss**/
+
+/* 全局样式 */
+.bg-col-0777DE{
+  background-color: #0777DE;
+}
+.bg-col-F3F3F3{
+  background-color: #F3F3F3;
+}
+.bg-col-FFFFFF{
+  background-color: #FFFFFF;
+}
+.col-909090{
+  color: #909090;
+}
+.col-FFFFFF{
+  color: #FFFFFF;
+}
+.col-0777DE{
+  color: #0777DE;
+}
+.margin-l-12{
+  margin-left: 12rpx;
+}
+.margin-l-32{
+  margin-left: 32rpx;
+}
+.margin-l-60{
+  margin-left: 60rpx;
+}
+.margin-r-32{
+  margin-right: 32rpx;
+}
+.margin-t-12{
+  margin-top: 12rpx;
+}
+.margin-t-20{
+  margin-top: 20rpx;
+}
+.margin-t-40{
+  margin-top: 40rpx;
+}
+.margin-t-60{
+  margin-top: 60rpx;
+}
+.margin-b-40{
+  margin-bottom: 40rpx;
+}
+.padding-l-18{
+  padding-left: 18rpx;
+}
+.padding-l-32{
+  padding-left: 32rpx;
+}
+.padding-r-18{
+  padding-right: 18rpx;
+}
+.padding-r-32{
+  padding-right: 32rpx;
+}
+.padding-b-40{
+  padding-bottom: 40rpx;
+}
+.font-64{
+  font-size: 64rpx !important;
+}
+.font-32{
+  font-size: 32rpx !important;
+}
+.font-28{
+  font-size: 28rpx !important;
+}
+.font-24{
+  font-size: 24rpx !important;
+}
+.text-c{
+  text-align: center;
+}
+.h-380{
+  height: 380rpx;
+}
+.h-100{
+  height: 100rpx;
+}
+.h-30{
+  height: 30rpx;
+}
+.h-60{
+  height: 60rpx;
+}
+.h-64{
+  height: 64rpx;
+}
+.h-80{
+  height: 80rpx;
+}
+.h-160{
+  height: 160rpx;
+}
+.h-100{
+  height: 100rpx;
+}
+.h-120{
+  height: 120rpx;
+}
+.h-100-100{
+  height: 100%;
+}
+.ln-h-30{
+  line-height: 30rpx;
+}
+.ln-h-60{
+  line-height: 60rpx;
+}
+.ln-h-100{
+  line-height: 100rpx;
+}
+.ln-h-120{
+  line-height: 120rpx;
+}
+.ln-h-380{
+  line-height: 380rpx;
+}
+
+.w-64{
+  width: 64rpx;
+}
+.w-80{
+  width: 80rpx;
+}
+
+.w-530{
+  width: 530rpx;
+}
+.w-100-100{
+  width: 100%;
+}
+.flex-row{
+  display: flex;
+}
+.flex-basis-0{
+  flex-basis: 0;
+}
+.flex-grow-1{
+  flex-grow: 1;
+}
+
+.border-radius-50{
+  border-radius: 50%;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.margin-0-auto{
+  margin: 0 auto;
+}
+
+.border-bottom-2{
+  border-bottom: 2px solid #F3F3F3;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+

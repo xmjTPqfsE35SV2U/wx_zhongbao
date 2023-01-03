@@ -1,0 +1,7 @@
+<!--pages/talent/talent.wxml-->
+<view style="height: 100vh;background-color: #F3F3F3;">达人
+
+
+<!-- 导航栏 -->
+<!-- <tabbar></tabbar> -->
+</view>

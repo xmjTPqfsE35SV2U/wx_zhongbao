@@ -1,0 +1,5 @@
+/* pages/register/register.wxss */
+.captcha{
+  border: 2px solid #0777DE;
+  border-radius: 4rpx;
+}

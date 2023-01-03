@@ -1,0 +1,46 @@
+<!--pages/login/login.wxml-->
+<view class="bg-col-F3F3F3" style="height: 100vh;">
+  <view class="bg-col-0777DE h-380 ln-h-380 font-64 col-FFFFFF text-c">**众包</view>
+  <view class="bg-col-FFFFFF margin-t-60 margin-l-32 margin-r-32 padding-b-40 padding-l-18 padding-r-18">
+    <!-- <van-cell-group> -->
+      <!-- 账号 -->
+      <!-- <van-field
+        value="{{ username }}"
+        label-class="h-100 h-ln-100"
+        clearable
+        label="用户名："
+        placeholder="请输入用户名"
+        bind:click-icon="onClickIcon"
+      /> -->
+      <!-- 密码 -->
+      <!-- <van-field
+        value="{{ password }}"
+        type="password"
+        label="密码："
+        placeholder="请输入密码"
+        border="{{ false }}"
+      /> -->
+  <!-- </van-cell-group> -->
+    <view class="h-100 ln-h-100 fn-32 flex-row border-bottom-2">
+      账号：<input class="h-100 ln-h-100" />
+    </view>
+    <view class="h-100 ln-h-100 fn-32 flex-row margin-t-40 border-bottom-2">
+      密码：<input class="h-100 ln-h-100" />
+    </view>
+    <view class="flex-row margin-t-40">
+      <view class="flex-basis-0 flex-grow-1">
+        <input placeholder="验证码" class="h-100 ln-h-100 text-c" />
+      </view>
+      <view class="captcha h-100 ln-h-100 text-c col-0777DE flex-basis-0 flex-grow-1">
+        获取验证码
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="margin-l-32 margin-r-32 margin-t-60">
+    <van-button custom-style="height:120rpx;width:100%;font-size:38rpx" type="info">立即注册</van-button>
+  </view>
+  <view class="text-c margin-t-20">
+    <span bindtap="goLogin" class="font-24 col-909090">已有账号点此登录</span>
+  </view>
+</view>

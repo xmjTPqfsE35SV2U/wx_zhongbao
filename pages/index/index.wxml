@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view style="height: 100vh;background-color: #F3F3F3;">
+  <!-- 搜索 -->
+  <view class="bg-col-FFFFFF padding-b-40">
+    <view class="search w-530 h-60 margin-0-auto bg-col-F3F3F3">
+      <input placeholder="项目搜索" style="justify-content: space-between;" class="margin-l-32 h-60 ln-h-60 flex-row align-items-center">
+        <view style="width: 40rpx;height: 40rpx;margin-right: 20rpx;">
+          <image class="w-100-100 h-100-100" src="/image/search.png"></image>
+        </view>
+      </input>
+    </view>
+  </view>
+  <!-- 轮播 -->
+  <view class="">
+    <swiper class="w-100-100">
+      <block wx:for="{{imgList}}" wx:key="url">
+        <swiper-item>
+          <image class="w-100-100 h-100-100" src="{{item.url}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view>
+      <view class="flex-row h-160 align-items-center bg-col-FFFFFF font-28 col-0777DE tx-c">
+        <view class="flex-basis-0 flex-grow-1 text-c">
+            <view>{{count_money}}</view>
+            <view class="margin-t-20">累计金额</view>
+        </view>
+        <view class="flex-basis-0 flex-grow-1 text-c">
+            <view>{{count_package}}</view>
+            <view class="margin-t-20">项目数量</view>
+        </view>
+        <view class="flex-basis-0 flex-grow-1 text-c">
+            <view>{{count_developer}}</view>
+            <view class="margin-t-20">注册开发者</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- List -->
+  <!-- <view>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab nav-class="font-64" title="热门项目">内容 1</van-tab>
+      <van-tab title="热门达人">内容 2</van-tab>
+    </van-tabs>
+  </view> -->
+</view>
+

@@ -1,0 +1,18 @@
+<!--pages/project/project.wxml-->
+<view style="height: 100vh;background-color: #F3F3F3;">
+  <view class="bg-col-FFFFFF padding-b-40">
+    <view class="search w-530 h-60 margin-0-auto bg-col-F3F3F3">
+      <input placeholder="项目搜索" style="justify-content: space-between;" class="margin-l-32 h-60 ln-h-60 flex-row align-items-center">
+        <view style="width: 40rpx;height: 40rpx;margin-right: 20rpx;">
+          <image class="w-100-100 h-100-100" src="/image/search.png"></image>
+        </view>
+      </input>
+    </view>
+  </view>
+  <van-dropdown-menu custom-class="yy">
+    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+    <van-dropdown-item value="{{ value3 }}" options="{{ option3 }}" />
+  </van-dropdown-menu>
+</view>
+
