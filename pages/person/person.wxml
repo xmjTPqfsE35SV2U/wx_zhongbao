@@ -1,25 +1,30 @@
 <!--pages/person/person.wxml-->
-<view style="height: 100vh;background-color: #F3F3F3;">
+<view style="background-color: #F3F3F3;">
+  <!-- 标题栏 -->
+  <indexBar title="个人中心"></indexBar>
+
+  
+
   <view class="bg-col-0777DE h-380 flex-row align-items-center justify-content-center">
     <view>
       <view class="text-c">
         <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
       </view>
       <view class="col-FFFFFF margin-t-20 text-c font-28">
-        <span class="margin-r-32">Null</span>
+        <span>hello</span>
         <span class="margin-l-32">性别：未设置</span>
       </view>
-      <view class="col-FFFFFF text-c margin-t-40 flex-row align-items-center">
+      <view class="col-FFFFFF justify-content-center margin-t-40 flex-row align-items-center">
         <view class="h-60 ln-h-60">接单：</view>
-        <van-switch class="h-60" size="48rpx" checked="{{ checked }}" bind:change="onChange"></van-switch>
+        <van-switch active-color="#07c160" inactive-color="#DCDEE0" style="margin-top: 5rpx;" size="48rpx" checked="{{ checked }}" bind:change="onChange"></van-switch>
       </view>
     </view>
   </view>
-  <!--  -->
+  <!-- List -->
   <view>
     <view wx:for="{{optionsList}}" wx:key="{{optionsList.text}}" bindtap="goOption" data-url="{{item.url}}" class="h-120 ln-h-120 padding-l-32 padding-r-32 flex-row space-between bg-col-FFFFFF margin-t-12">
       <view class="flex-row align-items-center">
-        <image class="h-64 w-64" src="/image/account-management.png"></image>
+        <image class="h-64 w-64" src="{{item.imgUrl}}"></image>
         <span class="margin-l-12">{{item.text}}</span>
       </view>
       <view class="flex-row align-items-center">
@@ -30,7 +35,7 @@
   <!--  -->
   <view class="margin-t-40">
     <view>
-      <van-button custom-class="w-100-100 btn bg-col-FFFFFF" type="default">切换为发包方</van-button>
+      <van-button bindtap="goEmployer" custom-class="w-100-100 btn bg-col-FFFFFF" type="default">切换为发包方</van-button>
     </view>
     <view class="margin-t-12">
       <van-button custom-class="w-100-100 btn bg-col-FFFFFF" type="default">退出登录</van-button>

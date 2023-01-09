@@ -1,7 +1,11 @@
 <!--index.wxml-->
+
 <view style="height: 100vh;background-color: #F3F3F3;">
+  <!-- 标题栏 -->
+  <indexBar title="首页"></indexBar>
   <!-- 搜索 -->
-  <view class="bg-col-FFFFFF padding-b-40">
+  <van-search shape="round" style="border-radius: 20rpx;" value="{{ value }}" placeholder="请输入搜索关键词" />
+  <!-- <view class="bg-col-FFFFFF padding-t-20 padding-b-20">
     <view class="search w-530 h-60 margin-0-auto bg-col-F3F3F3">
       <input placeholder="项目搜索" style="justify-content: space-between;" class="margin-l-32 h-60 ln-h-60 flex-row align-items-center">
         <view style="width: 40rpx;height: 40rpx;margin-right: 20rpx;">
@@ -9,10 +13,10 @@
         </view>
       </input>
     </view>
-  </view>
+  </view> -->
   <!-- 轮播 -->
   <view class="">
-    <swiper class="w-100-100">
+    <swiper class="w-100-100" autoplay="true" circular="true">
       <block wx:for="{{imgList}}" wx:key="url">
         <swiper-item>
           <image class="w-100-100 h-100-100" src="{{item.url}}"></image>
@@ -37,11 +41,93 @@
     </view>
   </view>
   <!-- List -->
-  <!-- <view>
-    <van-tabs active="{{ active }}" bind:change="onChange">
-      <van-tab nav-class="font-64" title="热门项目">内容 1</van-tab>
-      <van-tab title="热门达人">内容 2</van-tab>
-    </van-tabs>
-  </view> -->
+  <view>
+    <view class="margin-t-60 ln-h-120 bg-col-FFFFFF flex-row font-32 padding-l-32 fn-w-500">
+      <view bindtap="selectOn" data-selectItem="0" class="{{selectOn?'border-bottom-item':''}}">热门项目</view>
+      <view bindtap="selectOn" data-selectItem="1" class="{{selectOn?'margin-l-60':'margin-l-60 border-bottom-item'}}">热门达人</view>
+    </view>
+    <!-- 项目 -->
+    <view wx:if="{{selectOn}}" class="bg-col-F3F3F3">
+      <view wx:for="{{ProjectList}}" wx:key="user_id" class="bg-col-FFFFFF margin-b-20 padding-l-32 padding-r-32 padding-t-40 padding-b-40">
+            <view class="flex-row space-between">
+                <view class="font-28 col-0777DE">{{item[1].package_name}}</view>
+                <view class="font-28 col-FF8A00">{{item[5].budget}}万</view>
+            </view>
+            <view class="flex-row margin-t-20 space-between">
+                <view class="font-24 col-CACACA">{{item[8].subpackage_status[0].meaning}}</view>
+                <view class="font-24 col-CACACA">已有{{item[10].click_count}}人竞标</view>
+            </view>
+            <view class="flex-row margin-t-20 space-between">
+                <view class="font-24 col-0777DE">更新时间：{{item[14].UpdateTime}}</view>
+                <view class="font-24 col-FF0000">{{item[9].bidding_status[0].meaning}}</view>
+            </view>
+            <view class="flex-row margin-t-20">
+                <view class="font-24 col-909090">{{item[7].package_description}}</view>
+            </view>
+            <view class="flex-row margin-t-40">
+                <view wx:for="{{item[12].job}}" wx:key="index" class="margin-r-20 border-radius-20 font-24 bg-col-0777DE col-FFFFFF padding-l-20 padding-r-20 padding-t-7 padding-b-7">
+                    <view>{{item.meaning}}</view>
+                </view>
+            </view>
+            <view class="flex-row space-between margin-t-20">
+                <view class="flex-row">
+                    <view class="fn-size-0 w-64 h-64">
+                        <image class="w-100-100 h-100-100 border-radius-50" src="/image/user_logo.jpg" />
+                    </view>
+                    <view class="flex-row align-items-center margin-l-24">
+                        <view class="font-24 col-909090">{{item[2].NickName[0].NickName}}</view>
+                    </view>
+                </view>
+            </view>
+      </view>
+    </view>
+    <!-- 达人 -->
+    <view wx:if="{{!selectOn}}" class="bg-col-F3F3F3">
+      <view wx:for="{{TanlentList}}" wx:key="package_id" class="bg-col-FFFFFF margin-b-20">
+        <view class="padding-l-32 padding-r-32 padding-t-40 padding-b-40 bg-col-FFFFFF">
+            <view class="flex-row space-between">
+              <view class="font-32 col-0777DE">许**</view>
+              <view class="font-28 col-FF8A00">￥800/天</view>
+            </view>
+            <view class="flex-row margin-t-20">
+              <view class="font-28">技能：</view>
+              <view class="font-24 col-606060">JAVA、GO、Python</view>
+            </view> 
+            <view class="flex-row margin-t-20">
+              <view class="font-28">作品：</view>
+              <view class="font-24 col-606060">***电商平台</view>
+            </view>
+            <view class="flex-row margin-t-20">
+              <view class="font-28 col-909090">可工作时间：</view>
+              <view class="font-24 col-909090">工作日09：00-18：00 周末09：00-12：00</view>
+            </view>
+            <view class="flex-row flex-wrap">
+              <!-- <view class="margin-t-20 margin-r-20 border-radius-20 font-24 bg-col-0777DE col-FFFFFF padding-l-20 padding-r-20 padding-t-7 padding-b-7">
+                  <view>已认证</view>
+              </view> -->
+              <view class="margin-t-20 margin-r-20 border-radius-20 font-24 bg-col-0777DE col-FFFFFF padding-l-20 padding-r-20 padding-t-7 padding-b-7">
+                  <view class="">后端开发 | 高级</view>
+              </view>
+              <view class="margin-t-20 margin-r-20 border-radius-20 font-24 bg-col-0777DE col-FFFFFF padding-l-20 padding-r-20 padding-t-7 padding-b-7">
+                  <view class="">前端开发 | 初级</view>
+              </view>
+            </view>
+            <view class="flex-row space-between margin-t-30">
+              <view class="flex-row">
+                  <view class="fn-size-0 border-r-user w-64 h-64">
+                      <image class="w-100-100 h-100-100 border-radius-50" src="/image/user_logo.jpg" />
+                  </view>
+                  <view class="flex-row align-items-center margin-l-12">
+                      <view class="font-24 col-909090">{{item[1].NickName}}</view>
+                  </view>
+              </view>
+              <view class="flex-row align-items-center">
+                  <view class="border-radius-20 padding-l-20 padding-r-20 padding-t-7 padding-b-7 tx-c font-24 col-FFFFFF bg-col-FF8A00">邀请投标</view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
 

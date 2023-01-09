@@ -3,3 +3,15 @@
 .border-bottom{
   border-bottom: 2rpx solid #C4C4C4;
 }
+
+.border-dashed-2{
+  border: 2rpx dashed #C4C4C4;
+}
+
+.cardImg{
+  height: 400rpx;
+  width: 686rpx;
+  border: 2rpx dashed #C4C4C4;
+  /* background-image: url("/image/frontoIdCard.png"); */
+  /* background-size: 100% 100%; */
+}

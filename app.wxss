@@ -4,11 +4,20 @@
 .bg-col-0777DE{
   background-color: #0777DE;
 }
+.bg-col-1866B7{
+  background-color: #1866B7;
+}
 .bg-col-F3F3F3{
   background-color: #F3F3F3;
 }
 .bg-col-FFFFFF{
   background-color: #FFFFFF;
+}
+.bg-col-FF8A00{
+  background-color: #FF8A00;
+}
+.bg-col-909090{
+  background-color: #909090;
 }
 .col-909090{
   color: #909090;
@@ -19,8 +28,29 @@
 .col-0777DE{
   color: #0777DE;
 }
+.col-FF8A00{
+  color: #FF8A00;
+}
+.col-CACACA{
+  color: #CACACA;
+}
+.col-FF0000{
+  color: #FF0000;
+}
+.col-606060{
+  color: #606060;
+}
+.col-000000{
+  color: #000000;
+}
 .margin-l-12{
   margin-left: 12rpx;
+}
+.margin-l-24{
+  margin-left: 24rpx;
+}
+.margin-l-20{
+  margin-left: 20rpx;
 }
 .margin-l-32{
   margin-left: 32rpx;
@@ -31,17 +61,29 @@
 .margin-r-32{
   margin-right: 32rpx;
 }
+.margin-r-20{
+  margin-right: 20rpx;
+}
+.margin-t-10{
+  margin-top: 10rpx;
+}
 .margin-t-12{
   margin-top: 12rpx;
 }
 .margin-t-20{
   margin-top: 20rpx;
 }
+.margin-t-30{
+  margin-top: 30rpx;
+}
 .margin-t-40{
   margin-top: 40rpx;
 }
 .margin-t-60{
   margin-top: 60rpx;
+}
+.margin-b-20{
+  margin-bottom: 20rpx;
 }
 .margin-b-40{
   margin-bottom: 40rpx;
@@ -52,11 +94,32 @@
 .padding-l-32{
   padding-left: 32rpx;
 }
+.padding-l-20{
+  padding-left: 20rpx;
+}
 .padding-r-18{
   padding-right: 18rpx;
 }
+.padding-r-20{
+  padding-right: 20rpx;
+}
 .padding-r-32{
   padding-right: 32rpx;
+}
+.padding-t-7{
+  padding-top: 7rpx;
+}
+.padding-b-7{
+  padding-bottom: 7rpx;
+}
+.padding-t-40{
+  padding-top: 40rpx;
+}
+.padding-t-20{
+  padding-top: 20rpx;
+}
+.padding-b-20{
+  padding-bottom: 20rpx;
 }
 .padding-b-40{
   padding-bottom: 40rpx;
@@ -66,6 +129,9 @@
 }
 .font-32{
   font-size: 32rpx !important;
+}
+.font-56{
+  font-size: 56rpx !important;
 }
 .font-28{
   font-size: 28rpx !important;
@@ -138,17 +204,26 @@
 .flex-row{
   display: flex;
 }
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+
 .flex-basis-0{
   flex-basis: 0;
 }
 .flex-grow-1{
   flex-grow: 1;
 }
-
+.border-radius-20{
+  border-radius: 20rpx;
+}
 .border-radius-50{
   border-radius: 50%;
 }
-
 .align-items-center{
   align-items: center;
 }
@@ -156,15 +231,12 @@
 .justify-content-center{
   justify-content: center;
 }
-
 .space-between{
   justify-content: space-between;
 }
-
 .margin-0-auto{
   margin: 0 auto;
 }
-
 .border-bottom-2{
   border-bottom: 2px solid #F3F3F3;
 }

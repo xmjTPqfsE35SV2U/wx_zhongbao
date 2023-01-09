@@ -1,40 +1,110 @@
-// pages/project/project.js
+const { apiUrl } = require("../js/apiUrl")
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    option1: [
-      { text: '项目类型', value: 0 },
-      { text: '新款商品', value: 1 },
-      { text: '活动商品', value: 2 },
-    ],
-    option2: [
-      { text: '所属职位', value: 'a' },
-      { text: '好评排序', value: 'b' },
-      { text: '销量排序', value: 'c' },
-    ],
-    option3: [
-      { text: '项目状态', value: 'a' },
-      { text: '竞标中', value: 'b' },
-      { text: '竞标结束', value: 'c' },
-    ],
-    value1: 0,
-    value2: 'a',
-    value3: 'a',
+    // 项目类型
+    option1: {
+      list: ['Android', 'ios','小程序','web网站','其它'],
+      result: [],
+    },
+    // 所属职位
+    option2: {
+      list: ['UI美工', '前端开发','后端开发','运维工程师','测试工程师'],
+      result: [],
+    },
+    // 项目状态
+    option3: {
+      list: ['竞标中', '竞标结束'],
+      result: [],
+    },
+    // 项目列表
+    ProjectList:[],
+
+  },
+  // 改变
+  onChange1(event) {
+    // console.log(1)
+    this.setData({
+      ['option1.result']:event.detail
+    });
+  },
+  onChange2(event) {
+    // console.log(2)
+    this.setData({
+      ['option2.result']:event.detail
+    });
+  },
+  onChange3(event) {
+    this.setData({
+      ['option3.result']:event.detail
+    });
+  },
+  // 选择
+  toggle1(event) {
+    const { index } = event.currentTarget.dataset;
+    // const checkbox = this.selectComponent(`.checkboxes-${index}`);
+    const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
+    checkboxs[0].toggle();
+  },
+  toggle2(event) {
+    const { index } = event.currentTarget.dataset;
+    const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
+    checkboxs[1].toggle();
+  },
+  toggle3(event) {
+    const { index } = event.currentTarget.dataset;
+    const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
+    checkboxs[2].toggle();
+  },
+
+
+  // 确认
+  onConfirm1(){
+    this.selectComponent('#item1').toggle();
+    // 选中的值
+    console.log(this.data.option1.result);
+    // 发送请求
+    
+  },
+  onConfirm2(){
+    this.selectComponent('#item2').toggle();
+  },
+  onConfirm3(){
+    this.selectComponent('#item3').toggle();
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    let that = this
+    // 获取项目列表
+    wx.request({
+      url: apiUrl+'/show_project',
+      method:"get",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        if(res.data.code == 1){
+          that.setData({
+            ProjectList:res.data.data
+          })
+          console.log(that.data.ProjectList)
+        }else{
+          console.log("请求失败")
+        }
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
+    
 
   },
 

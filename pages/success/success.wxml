@@ -1,0 +1,12 @@
+<!--pages/success/success.wxml-->
+<view style="height:100vh" class="flex-row align-items-center justify-content-center">
+  <!-- 标题栏 -->
+  <indexBar title=""></indexBar>
+  <view>
+    <view style="width:200rpx;height: 200rpx;">
+      <image class="w-100-100 h-100-100" src="/image/success.png"></image>
+    </view>
+    <view class="margin-t-60 text-c font-32">成功</view>
+  </view>
+  
+</view>

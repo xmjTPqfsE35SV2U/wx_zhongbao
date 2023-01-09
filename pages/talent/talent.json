@@ -1,5 +1,6 @@
 {
   "usingComponents": {
   },
-  "navigationBarTitleText": "达人"
+  "navigationBarTitleText": "达人",
+  "navigationStyle":"custom"
 }

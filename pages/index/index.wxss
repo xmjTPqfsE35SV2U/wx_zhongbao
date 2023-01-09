@@ -2,3 +2,6 @@
 .search{
   border-radius: 100rpx;
 }
+.border-bottom-item{
+  border-bottom: 4rpx solid #ff8a00;
+}

@@ -1,1 +1,17 @@
 /* pages/talent/talent.wxss */
+/* .search{
+  border-radius: 100rpx;
+} */
+
+/* 去除默认的阴影样式 */
+/* .van-dropdown-menu{
+  box-shadow: 0 0 0 !important;
+} */
+
+
+.value-class {
+  flex: none !important;
+}
+.van-cell__title{
+  text-align: left !important;
+}

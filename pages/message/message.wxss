@@ -1,0 +1,10 @@
+/* pages/message/message.wxss */
+
+.messageItem{
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.border-box{
+  box-sizing: border-box;
+}

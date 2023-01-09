@@ -1,0 +1,60 @@
+<!--pages/personInfo/personInfo.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="个人信息"></indexBar>
+  <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row space-between">
+    <view class="flex-row align-items-center">头像：</view>
+    <view>
+      <!-- 头像 -->
+      <view class="margin-l-32 margin-r-32 margin-t-10">
+        <van-uploader bind:after-read="afterRead" >
+          <view class="userImg">
+            <image class="w-100-100 h-100-100 border-radius-50" src="{{userImg==''?'/image/user_logo.jpg':userImg.url}}" />
+          </view>
+        </van-uploader>
+      </view>
+    </view>
+  </view>
+  <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">姓名：</view>
+    <view class="flex-grow-1">
+      <input class="w-100-100 h-100 ln-h-100" value="{{name}}" placeholder="输入姓名" />
+    </view>
+  </view>
+  <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">性别：</view>
+    <view class="flex-column justify-content-center">
+      <van-radio-group  direction="horizontal" value="{{ radio }}" bind:change="onChange">
+        <van-radio name="1">男</van-radio>
+        <van-radio name="2">女</van-radio>
+      </van-radio-group>
+    </view>
+  </view>
+  <view bindtap="birthSelect" class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">生日：</view>
+    <view>{{currentDate}}</view>
+  </view>
+  <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">邮箱：</view>
+    <view class="flex-grow-1">
+      <input class="w-100-100 h-100 ln-h-100" value="{{eamil}}" placeholder="输入邮箱" />
+    </view>
+  </view>
+
+  <!-- 提交 -->
+  <view style="margin-top: 120rpx; padding-bottom: 120rpx;" class="margin-l-32 margin-r-32">
+    <van-button bind:click="submit" size="large" type="info">保存</van-button>
+  </view>
+
+
+  <!-- 时间选择器 -->
+  <view wx:if="{{birthShow}}" class="birthday">
+    <van-datetime-picker
+      type="date"
+      value="{{ currentDate }}"
+      bind:input="onInput"
+      bind:confirm="birthConfirm"
+      bind:cancel="birthCancel"
+    />
+  </view>
+</view>

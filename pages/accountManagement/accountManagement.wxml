@@ -1,8 +1,32 @@
 <!--pages/accountManagement/accountManagement.wxml-->
 <view>
+  <!-- 标题栏 -->
+  <indexBar title="账号管理"></indexBar>
+  <!-- 个人信息 -->
   <view class="border-bottom margin-l-32 margin-r-32 flex-row">
-    <view class="">姓名：</view>
+    <navigator class="flex-row w-100-100 space-between" url="/pages/personInfo/personInfo" open-type="navigate">
+      <view class="h-100 ln-h-100">个人信息</view>
+      <view class="h-100 flex-row align-items-center">
+        <image style="width: 40rpx;height: 40rpx;" src="/image/qiantou.png"></image>
+      </view>
+    </navigator>
   </view>
-
-
+  <!-- 账号密码 -->
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <navigator class="flex-row w-100-100 space-between" url="/pages/accountPassword/accountPassword" open-type="navigate">
+      <view class="h-100 ln-h-100">账号密码</view>
+      <view class="h-100 flex-row align-items-center">
+        <image style="width: 40rpx;height: 40rpx;" src="/image/qiantou.png"></image>
+      </view>
+    </navigator>
+  </view>
+  <!-- 个人主页 -->
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <navigator class="flex-row w-100-100 space-between" url="/pages/personHome/personHome" open-type="navigate">
+      <view class="h-100 ln-h-100">个人主页</view>
+      <view class="h-100 flex-row align-items-center">
+        <image style="width: 40rpx;height: 40rpx;" src="/image/qiantou.png"></image>
+      </view>
+    </navigator>
+  </view>
 </view>

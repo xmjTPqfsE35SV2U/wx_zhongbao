@@ -1,0 +1,151 @@
+<!--pages/personHome/personHome.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="个人主页"></indexBar>
+  
+  <!-- <div class="h-88 boder_b_solid margin-l-32 margin-r-32">
+      <div class="fn-size-28 h-88 h-ln-88">个人优势</div>
+  </div> -->
+
+  <view class="bg-col-F3F3F3">
+    <!-- 个人优势 -->
+    <view class="bg-col-FFFFFF">
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 border-bottom-2">个人优势</view>
+      <view class="margin-t-20 margin-b-40 margin-l-32 margin-r-32">
+        <view class="font-28">
+          {{advantageText}}
+        </view>
+      </view>
+      <view class="flex-row justify-content-center padding-b-20">
+        <view class="addRound">
+          <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+        </view>
+        <view class="font-28 col-606060" style="line-height: 48rpx;">编辑</view>
+      </view>
+    </view>
+    <!-- 工作经历 -->
+    <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 border-bottom-2">工作经历</view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">时间：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请选择时间" />
+        </view>
+      </view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">公司：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入公司" />
+        </view>
+      </view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">部门：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入部门" />
+        </view>
+      </view>
+      <!-- 工作内容 -->
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">工作内容：</view>
+      </view>
+      <!--  -->
+      <view class="margin-l-32 margin-r-32 textInputBox">
+        <textarea placeholder="请输入工作内容" class="padding-20"></textarea>
+      </view>
+      <view class="flex-row margin-t-40 justify-content-center padding-b-20">
+        <view class="addRound">
+          <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+        </view>
+        <view class="font-28 col-606060" style="line-height: 48rpx;">编辑</view>
+      </view>
+    </view>
+    <!-- 教育经历 -->
+    <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 border-bottom-2">教育经历</view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">学校名称：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入学校名称" />
+        </view>
+      </view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">学历：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入学历" />
+        </view>
+      </view>
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">专业：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入专业" />
+        </view>
+      </view>
+      <!-- 在校时间 -->
+      <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">在校时间：</view>
+        <view class="flex-grow-1">
+          <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入专业" />
+        </view>
+      </view>
+      <!-- 工作内容 -->
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+        <view class="flex-row align-items-center">在校经历：</view>
+      </view>
+      <!--  -->
+      <view class="margin-l-32 margin-r-32 textInputBox">
+        <textarea placeholder="所获得的荣誉、证书等" class="padding-20"></textarea>
+      </view>
+      <view class="flex-row margin-t-40 justify-content-center padding-b-20">
+        <view class="addRound">
+          <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+        </view>
+        <view class="font-28 col-606060" style="line-height: 48rpx;">编辑</view>
+      </view>
+    </view>
+    <!-- 专业技能 -->
+    <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32 border-bottom-2">专业技能</view>
+      <view class="margin-t-20 margin-b-40 margin-l-32 margin-r-32">
+        <view class="font-28">
+          Java
+        </view>
+      </view>
+      <view class="flex-row justify-content-center padding-b-20">
+        <view class="addRound">
+          <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+        </view>
+        <view class="font-28 col-606060" style="line-height: 48rpx;">编辑</view>
+      </view>
+    </view>
+    <!-- 作品展示 -->
+    <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="h-100 ln-h-100 margin-l-32 margin-r-32">作品展示</view>
+      <!--  -->
+      <!-- 正面 -->
+      <view class="margin-l-32 margin-r-32">
+        <van-uploader bind:after-read="afterRead" >
+          <view class="cardImg">
+            <image class="w-100-100 h-100-100" src="{{piecesImg.url}}">
+            </image>
+            <van-icon class="cardImgIcon" wx:if="{{piecesImg==''?true:false}}" name="plus" color="#C4C4C4" size="64rpx" />
+          </view>
+        </van-uploader>
+      </view>
+      <!--  -->
+      <view class="margin-l-32 margin-r-32 textInputBox">
+        <textarea placeholder="对作品内容进行描述" class="padding-20"></textarea>
+      </view>
+      <view class="flex-row margin-t-40 justify-content-center padding-b-20">
+        <view class="addRound">
+          <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+        </view>
+        <view class="font-28 col-606060" style="line-height: 48rpx;">编辑</view>
+      </view>
+    </view>
+    <!-- 提交 -->
+    <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="">
+      <van-button bind:click="submit" size="large" type="info">保存</van-button>
+    </view>
+  </view>
+</view>
+

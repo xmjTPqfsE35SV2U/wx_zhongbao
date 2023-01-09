@@ -2,5 +2,6 @@
   "usingComponents": {
     
   },
-  "navigationBarTitleText": "项目"
+  "navigationBarTitleText": "项目",
+  "navigationStyle":"custom"
 }

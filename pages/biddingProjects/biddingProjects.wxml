@@ -1,4 +1,45 @@
 <!--pages/biddingProjects/biddingProjects.wxml-->
-<view>
-  竞标项目
+
+
+<view style="height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 标题栏 -->
+  <indexBar title="竞标项目"></indexBar>
+  <view wx:for="{{ProjectList}}" wx:key="user_id" class="bg-col-FFFFFF margin-b-20 padding-l-32 padding-r-32 padding-t-40 padding-b-40">
+    <view class="flex-row space-between">
+        <view class="font-28 col-0777DE">{{item[1].package_name}}</view>
+        <view class="font-28 col-FF8A00">{{item[5].budget}}万</view>
+    </view>
+    <view class="flex-row margin-t-20 space-between">
+        <view class="font-24 col-CACACA">{{item[8].subpackage_status[0].meaning}}</view>
+        <view class="font-24 col-CACACA">已有{{item[10].click_count}}人竞标</view>
+    </view>
+    <view class="flex-row margin-t-20 space-between">
+        <view class="font-24 col-0777DE">剩余时间：9 天 22：10：09</view>
+        <view class="font-24 col-FF8A00">竞标中</view>
+    </view>
+    <view class="flex-row margin-t-20">
+        <view class="font-24 col-909090">{{item[7].package_description}}</view>
+    </view>
+    <view class="flex-row margin-t-40">
+        <view wx:for="{{item[12].job}}" wx:key="index" class="margin-r-20 border-radius-20 font-24 bg-col-0777DE col-FFFFFF padding-l-20 padding-r-20 padding-t-7 padding-b-7">
+            <view>{{item.meaning}}</view>
+        </view>
+    </view>
+    <view class="flex-row space-between margin-t-20">
+        <view class="flex-row">
+            <view class="fn-size-0 w-64 h-64">
+                <image class="w-100-100 h-100-100 border-radius-50" src="/image/user_logo.jpg" />
+            </view>
+            <view class="flex-row align-items-center margin-l-24">
+                <view class="font-24 col-909090">{{item[2].NickName[0].NickName}}</view>
+            </view>
+        </view>
+
+        <!-- <view>
+          <van-button size="small" round type="info">取消竞标</van-button>
+        </view> -->
+
+    </view>
+  </view>
+
 </view>

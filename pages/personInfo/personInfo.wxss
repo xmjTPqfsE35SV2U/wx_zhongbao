@@ -1,0 +1,20 @@
+/* pages/personInfo/personInfo.wxss */
+
+.border-bottom{
+  border-bottom: 2rpx solid #C4C4C4;
+}
+.birthday{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.leftTitle{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100rpx;
+}
+
+.userImg{
+  height: 80rpx;
+  width: 80rpx;
+}

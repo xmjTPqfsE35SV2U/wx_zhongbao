@@ -1,0 +1,28 @@
+/* pages/personHome/personHome.wxss */
+
+.addRound{
+  height: 48rpx;
+  width: 48rpx;
+  border-radius: 50%;
+}
+
+.textInputBox{
+  border: 2rpx dashed #C4C4C4;
+  border-radius: 8rpx;
+}
+.textInputBox>textarea{
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cardImg{
+  height: 400rpx;
+  width: 686rpx;
+  border: 2rpx dashed #C4C4C4;
+  border-radius: 8rpx;
+}
+.cardImgIcon{
+  position: absolute;
+  top: calc(50% - 32rpx);
+  left: calc(50% - 32rpx);
+}

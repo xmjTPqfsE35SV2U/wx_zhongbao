@@ -1,1 +1,17 @@
 /* pages/feedBack/feedBack.wxss */
+
+.textInputBox{
+  border: 2rpx dashed #C4C4C4;
+  border-radius: 8rpx;
+}
+.textInputBox>textarea{
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btnSubmit{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

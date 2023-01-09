@@ -8,14 +8,23 @@ Page({
     checked: true,
 
     optionsList:[
-      { text:"实名认证",url:"/pages/personRealName/personRealName" },
-      { text:"竞标项目",url:"/pages/biddingProjects/biddingProjects" },
-      { text:"项目状态",url:"/pages/projectStatus/projectStatus" },
-      { text:"账号管理",url:"/pages/accountManagement/accountManagement" },
-      { text:"问题反馈",url:"/pages/feedBack/feedBack" },
+      { text:"实名认证",url:"/pages/personRealName/personRealName",imgUrl:"/image/authentication.png" },
+      { text:"竞标项目",url:"/pages/biddingProjects/biddingProjects",imgUrl:"/image/bidding-projects.png" },
+      { text:"项目状态",url:"/pages/projectStatus/projectStatus",imgUrl:"/image/projectStatus.png" },
+      { text:"账号管理",url:"/pages/accountManagement/accountManagement",imgUrl:"/image/account-management.png" },
+      { text:"问题反馈",url:"/pages/feedBack/feedBack",imgUrl:"/image/account-management.png" },
+      { text:"消息管理",url:"/pages/message/message",imgUrl:"/image/problem-feedback.png" },
     ]
 
   },
+
+  goEmployer(){
+    console.log("123")
+    wx.redirectTo({
+      url:"/pages/employer/employer"
+    })
+  },
+
   goOption(event){
     console.log(event.currentTarget.dataset.url)
     wx.navigateTo({

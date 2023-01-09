@@ -1,0 +1,18 @@
+<!--pages/message/message.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="我的消息"></indexBar>
+  <view bindtap="goMessageDetail" wx:for="{{messageList}}" style="height: 140rpx;" class="border-bottom-2 border-box margin-l-32 margin-r-32 flex-row align-items-center">
+    <view class="w-80 h-80 flex-shrink-0">
+      <image class="w-100-100 h-100-100" src="/image/problem-feedback.png"></image>
+    </view>
+    <view class="flex-grow-1 margin-l-20" style="width: 0;">
+      <view class="flex-row space-between">
+        <view>【系统通知】</view>
+        <view class="col-606060">10天前</view>
+      </view>
+      <view class="margin-t-20 w-100-100 messageItem font-28">基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用。</view>
+    </view>
+  </view>
+  <!-- 提交 -->
+</view>

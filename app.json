@@ -12,7 +12,15 @@
     "pages/biddingProjects/biddingProjects",
     "pages/projectStatus/projectStatus",
     "pages/accountManagement/accountManagement",
-    "pages/feedBack/feedBack"
+    "pages/feedBack/feedBack",
+    "pages/personInfo/personInfo",
+    "pages/accountPassword/accountPassword",
+    "pages/personHome/personHome",
+    "components/indexBar/inderBar",
+    "pages/success/success",
+    "pages/employer/employer",
+    "pages/message/message",
+    "pages/messageDetail/messageDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,12 +59,25 @@
     ]
   },
   "usingComponents": {
+    "indexBar": "/components/indexBar/inderBar",
+    "van-icon": "@vant/weapp/icon/index",
     "van-button": "@vant/weapp/button/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
     "van-dropdown-item": "@vant/weapp/dropdown-item/index",
     "van-switch": "@vant/weapp/switch/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
   }
 }

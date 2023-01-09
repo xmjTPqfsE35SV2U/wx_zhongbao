@@ -1,0 +1,11 @@
+<!--pages/messageDetail/messageDetail.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="消息内容"></indexBar>
+  <view class="margin-l-32 margin-r-32">
+    <view style="font-weight: 900;margin-top: 40rpx;">系统通知</view>
+    <view class="font-28 margin-t-20">基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用。</view>
+    <view class="font-28 margin-t-20">2022-12-20 11:57:44</view>
+  </view>
+</view>
+
