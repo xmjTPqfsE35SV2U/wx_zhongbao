@@ -1,0 +1,61 @@
+<!--pages/employerRealName/employerRealName.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="企业实名"></indexBar>
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">企业名称：</view>
+    <van-field
+      model:value="{{ username }}"
+      placeholder="请输入企业名称"
+      border="{{ false }}"
+    />
+  </view>
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <view class="flex-row align-items-center">统一社会信用代码：</view>
+    <van-field
+      model:value="{{ cardID }}"
+      placeholder="请输入统一社会信用代码"
+      border="{{ false }}"
+    />
+  </view>
+  <view class="margin-l-32 margin-r-32 flex-row h-100 ln-h-100">
+    法人身份证正反面：
+  </view>
+  <view>
+    <!-- 正面 -->
+    <view class="margin-l-32 margin-r-32">
+      <van-uploader bind:after-read="afterRead" >
+        <view class="cardImg">
+          <image class="w-100-100 h-100-100" src="{{frontoIdCardUrl==''?'/image/frontoIdCard.png':frontoIdCardUrl.url}}" />
+        </view>
+      </van-uploader>
+    </view>
+    <!-- 反面 -->
+    <view class="margin-l-32 margin-r-32">
+      <van-uploader bind:after-read="afterReadFM" >
+        <view class="cardImg">
+          <image class="w-100-100 h-100-100" src="{{reverseSideIdCard==''?'/image/reverseSideIdCard.png':reverseSideIdCard.url}}" />
+        </view>
+      </van-uploader>
+    </view>
+  </view>
+  <!-- 营业执照 -->
+  <view class="margin-l-32 margin-r-32 flex-row h-100 ln-h-100">
+    营业执照：
+  </view>
+  <view class="margin-l-32 margin-r-32">
+    <van-uploader bind:after-read="afterReadBusiness" >
+      <view class="cardImg">
+        <image class="w-100-100 h-100-100" src="{{employerImg.url}}">
+        </image>
+        <van-icon class="cardImgIcon" wx:if="{{employerImg==''?true:false}}" name="plus" color="#C4C4C4" size="64rpx" />
+      </view>
+    </van-uploader>
+  </view>
+  <!-- 提示 -->
+  <view class="margin-l-32 margin-r-32 margin-t-20 col-FF0000">{{tips}}</view>
+  <!-- 提交 -->
+  <view style="margin-top: 120rpx; padding-bottom: 120rpx;" class="margin-l-32 margin-r-32">
+    <van-button bind:click="submit" size="large" type="info">实名提交</van-button>
+  </view>
+</view>

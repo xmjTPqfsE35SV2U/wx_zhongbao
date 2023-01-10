@@ -1,0 +1,25 @@
+<!--pages/publish/publish.wxml-->
+<text>pages/publish/publish.wxml</text>
+
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="我要发布"></indexBar>
+  <!-- 整包项目 -->
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <navigator class="flex-row w-100-100 space-between" url="/pages/wholePack/wholePack" open-type="navigate">
+      <view class="h-100 ln-h-100">整包项目</view>
+      <view class="h-100 flex-row align-items-center">
+        <image style="width: 40rpx;height: 40rpx;" src="/image/qiantou.png"></image>
+      </view>
+    </navigator>
+  </view>
+  <!-- 分包项目 -->
+  <view class="border-bottom margin-l-32 margin-r-32 flex-row">
+    <navigator class="flex-row w-100-100 space-between" url="/pages/subcontract/subcontract" open-type="navigate">
+      <view class="h-100 ln-h-100">分包项目</view>
+      <view class="h-100 flex-row align-items-center">
+        <image style="width: 40rpx;height: 40rpx;" src="/image/qiantou.png"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

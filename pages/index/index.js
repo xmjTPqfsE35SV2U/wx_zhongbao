@@ -1,7 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-const { apiUrl } = require("../js/apiUrl")
+const { apiUrl } = require("../../js/apiUrl")
 Page({
   data: {
     active: 1,

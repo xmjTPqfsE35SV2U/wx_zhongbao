@@ -1,4 +1,4 @@
-// pages/employer/employer.js
+// pages/projectManagement/projectManagement.js
 Page({
 
   /**

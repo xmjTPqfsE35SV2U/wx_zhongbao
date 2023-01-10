@@ -1,39 +1,48 @@
-// pages/biddingProjects/biddingProjects.js
-const { apiUrl } = require("../../js/apiUrl")
+// pages/employerRealName/employerRealName.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ProjectList:[]
+    // 用户名
+    username:"",
+    // 密码
+    cardID:"",
+    // 身份证正面
+    frontoIdCardUrl:"",
+    // 反面
+    reverseSideIdCard:"",
+    // 营业执照
+    employerImg:""
   },
-  // 获取热门项目
-  getHotProject(){
-    let that = this
-    wx.request({
-      url: apiUrl+'/show_hot_project',
-      method:"get",
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res){
-        if(res.data.code == 1){
-          that.setData({
-            ProjectList:res.data.data
-          })
-          console.log(that.data.ProjectList)
-        }else{
-          console.log("请求失败")
-        }
-      }
+  // 正面
+  afterRead(event){
+    const { file } = event.detail;
+    this.setData({
+      frontoIdCardUrl:file
     })
   },
+  // 反面
+  afterReadFM(event){
+    const { file } = event.detail;
+    this.setData({
+      reverseSideIdCard:file
+    })
+  },
+  // 营业执照
+  afterReadBusiness(event){
+    const { file } = event.detail;
+    this.setData({
+      employerImg:file
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getHotProject()
+
   },
 
   /**

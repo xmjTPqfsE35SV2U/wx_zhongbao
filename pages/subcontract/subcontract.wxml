@@ -1,0 +1,6 @@
+<!--pages/subcontract/subcontract.wxml-->
+<text>pages/subcontract/subcontract.wxml</text>
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="分包项目"></indexBar>
+</view>

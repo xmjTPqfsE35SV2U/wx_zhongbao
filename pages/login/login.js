@@ -1,6 +1,6 @@
 // pages/login/login.js
 
-let api = require("../js/apiUrl")
+let api = require("../../js/apiUrl")
 
 Page({
   /**

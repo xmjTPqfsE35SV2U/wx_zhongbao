@@ -1,4 +1,4 @@
-const { apiUrl } = require("../js/apiUrl")
+const { apiUrl } = require("../../js/apiUrl")
 Page({
   /**
    * 页面的初始数据

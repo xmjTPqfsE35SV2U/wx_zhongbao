@@ -1,6 +1,4 @@
 <!--pages/biddingProjects/biddingProjects.wxml-->
-
-
 <view style="height: 100vh;" class="bg-col-F3F3F3">
   <!-- 标题栏 -->
   <indexBar title="竞标项目"></indexBar>

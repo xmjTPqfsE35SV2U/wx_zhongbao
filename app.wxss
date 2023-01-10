@@ -43,6 +43,12 @@
 .col-000000{
   color: #000000;
 }
+.col-539FED{
+  color: #539FED;
+}
+.col-C4C4C4{
+  color: #C4C4C4;
+}
 .margin-l-12{
   margin-left: 12rpx;
 }
@@ -175,6 +181,9 @@
 .ln-h-30{
   line-height: 30rpx;
 }
+.ln-h-48{
+  line-height: 48rpx;
+}
 .ln-h-60{
   line-height: 60rpx;
 }
@@ -212,6 +221,9 @@
   flex-shrink: 0;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .flex-basis-0{
   flex-basis: 0;
 }
@@ -240,6 +252,11 @@
 .border-bottom-2{
   border-bottom: 2px solid #F3F3F3;
 }
+
+.display-none{
+  display: none;
+}
+
 
 .container {
   height: 100%;

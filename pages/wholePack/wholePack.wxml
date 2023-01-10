@@ -1,0 +1,139 @@
+<!--pages/wholePack/wholePack.wxml-->
+<view>
+  <!-- 标题栏 -->
+  <indexBar title="整包项目"></indexBar>
+  <view class="bg-col-F3F3F3">
+    <form>
+      <!-- 项目标题栏目 -->
+      <view class="bg-col-FFFFFF padding-b-40">
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">项目标题：</view>
+          <view class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入项目标题" />
+          </view>
+        </view>
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">保密设置：</view>
+          <view class="flex-grow-1">
+            <label for="public">
+              <span class="{{secrecy==0?'selctTag font-24':'unTag font-24'}}">公开竞标项目</span>
+            </label>
+            <label for="private">
+              <span class="{{secrecy==0?'margin-l-20 unTag font-24':'margin-l-20 selctTag font-24'}}">保密竞标项目</span>
+            </label>
+          </view>
+        </view>
+        <!-- 项目类型 -->
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">项目类型：</view>
+        </view>
+        <view class="margin-l-32 margin-r-32">
+          <checkbox-group class="flex-row flex-wrap" bindchange="">
+            <label style="display: block;" class="tagBox margin-t-40" wx:for="{{projectTypeList}}">
+              <checkbox style="display: none;" value="{{item.text}}" />
+              <span bindtap="projectTypeCheck" data-id="{{item.id}}" class="{{item.isCheck==true?'margin-t-20 selctTag font-24':'margin-t-20 unTag font-24'}}">{{item.text}}</span>
+            </label>
+          </checkbox-group>
+        </view>
+        <!-- 关联保密设置 ：可优化为项目类型的方式 -->
+        <radio-group style="display:none" bindchange="secrecyCheck">
+          <radio id="public" value="0" checked />选中
+          <radio id="private" value="1" />选中
+        </radio-group>
+      </view>
+      <!-- 项目预算栏目 -->
+      <view class="margin-t-20 bg-col-FFFFFF">
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">项目预算：</view>
+          <view class="flex-grow-1">
+            
+            
+            <!-- <span class="selctTag font-24">公开竞标项目</span>
+            <span class="margin-l-20 unTag font-24">保密竞标项目</span> -->
+          </view>
+        </view>
+        <!-- 是否开发票 -->
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">是否需要开票：</view>
+          <view class="flex-grow-1">
+            <radio-group bindchange="invoiceCheck">
+              <label>
+                <radio class="display-none" value='1' />
+                <span style="padding-left: 24rpx;padding-right: 24rpx;" class="{{isinvoice?'selctTag font-24':'unTag font-24'}}">是</span>
+              </label>
+              <label>
+                <radio class="display-none" value='0' />
+                <span style="padding-left: 24rpx;padding-right: 24rpx;" class="{{isinvoice?'margin-l-20 unTag font-24':'margin-l-20 selctTag font-24'}}">否</span>
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <!-- 期望工期 -->
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">期望工期：</view>
+          <view class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入工期" />
+          </view>
+        </view>
+      </view>
+      <!-- 联系人栏目 -->
+      <view class="margin-t-20 bg-col-FFFFFF">
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">联系人：</view>
+          <view class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系人" />
+          </view>
+        </view>
+        <!-- 联系电话 -->
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">联系电话：</view>
+          <view class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系电话" />
+          </view>
+        </view>
+        <!-- 邮箱 -->
+        <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">邮箱：</view>
+          <view class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入邮箱" />
+          </view>
+        </view>
+      </view>
+      <!-- 项目描述 -->
+      <view class="margin-t-20 bg-col-FFFFFF">
+        <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+          <view class="flex-row align-items-center">项目描述：</view>
+        </view>
+        <view class="margin-l-32 margin-r-32 textInputBox">
+          <textarea placeholder="对项目进行描述" class="padding-20"></textarea>
+        </view>
+      </view>
+      <!-- 添加附件 -->
+      <view class="bg-col-FFFFFF margin-t-20">
+        <view class="flex-row padding-t-20 justify-content-center padding-b-20">
+          <view class="addRound">
+            <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+          </view>
+          <view class="font-28 col-606060" style="line-height: 48rpx;">添加附件</view>
+        </view>
+      </view>
+      <!-- 平台提示 -->
+      <view class="margin-t-20 padding-t-20 padding-b-20 padding-l-32 padding-r-32 bg-col-FFFFFF font-24 col-909090">
+        <view>温馨提示：</view>
+        <view class="margin-t-20 ln-h-48"> 1、请提供详细的项目资料，以便于我们为您推荐合适的开发者。</view>
+        <view class="ln-h-48">  2、整包项目收费标准：需要收取15%的平台服务费。</view>
+        <view class="ln-h-48">  3、项目发布之后，平台工作人员将在半个工作日内联系您。</view>
+      </view>
+      <!-- 平台协议 -->
+      <view class="margin-t-20 flex-row justify-content-center">
+        <van-checkbox shape="square" icon-size="28rpx" value="{{ agreementCheck }}" bind:change="agreementOn">
+          <span class="col-909090 font-24">我已阅读《xxx众包平台项目发布协议》</span>
+        </van-checkbox>
+      </view>
+      <!-- 提交 -->
+      <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="">
+        <van-button bind:click="onSubmit" size="large" type="info">发布项目</van-button>
+      </view>
+    </form>
+  </view>
+</view>

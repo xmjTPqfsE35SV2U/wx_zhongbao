@@ -1,0 +1,12 @@
+/* pages/employerRealName/employerRealName.wxss */
+
+.cardImg{
+  height: 400rpx;
+  width: 686rpx;
+  border: 2rpx dashed #C4C4C4;
+}
+.cardImgIcon{
+  position: absolute;
+  top: calc(50% - 32rpx);
+  left: calc(50% - 32rpx);
+}

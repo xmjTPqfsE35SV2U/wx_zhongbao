@@ -1,0 +1,40 @@
+<!--components/pickUpPackage/pickUpPackage.wxml-->
+<!-- 接包方 -->
+<view>
+  <view class="bg-col-0777DE h-380 flex-row align-items-center justify-content-center">
+    <view>
+      <view class="text-c">
+        <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
+      </view>
+      <view class="col-FFFFFF margin-t-20 text-c font-28">
+        <span>hello</span>
+        <span class="margin-l-32">性别：未设置</span>
+      </view>
+      <view class="col-FFFFFF justify-content-center margin-t-40 flex-row align-items-center">
+        <view class="h-60 ln-h-60">接单：</view>
+        <van-switch active-color="#07c160" inactive-color="#DCDEE0" style="margin-top: 5rpx;" size="48rpx" checked="{{ checked }}" bind:change="onChange"></van-switch>
+      </view>
+    </view>
+  </view>
+  <!-- List -->
+  <view>
+    <view wx:for="{{optionsList}}" wx:key="{{optionsList.text}}" bindtap="goOption" data-url="{{item.url}}" class="h-120 ln-h-120 padding-l-32 padding-r-32 flex-row space-between bg-col-FFFFFF margin-t-12">
+      <view class="flex-row align-items-center">
+        <image class="h-64 w-64" src="{{item.imgUrl}}"></image>
+        <span class="margin-l-12">{{item.text}}</span>
+      </view>
+      <view class="flex-row align-items-center">
+        <image style="width: 42rpx;height: 42rpx;" src="/image/qiehuang.png"></image>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="margin-t-40">
+    <view>
+      <van-button bindtap="hardPackage" size="large" custom-class="btn bg-col-FFFFFF" type="default">切换为发包方</van-button>
+    </view>
+    <view class="margin-t-12">
+      <van-button size="large" custom-class="bg-col-FFFFFF" type="default">退出登录</van-button>
+    </view>
+  </view>
+</view>

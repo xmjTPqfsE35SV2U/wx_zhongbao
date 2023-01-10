@@ -1,5 +1,5 @@
 // pages/projectStatus/projectStatus.js
-const { apiUrl } = require("../js/apiUrl")
+const { apiUrl } = require("../../js/apiUrl")
 Page({
 
   /**

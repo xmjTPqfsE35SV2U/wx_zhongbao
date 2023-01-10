@@ -1,5 +1,7 @@
 {
   "usingComponents": {
+    "PickUpPackage":"/components/pickUpPackage/pickUpPackage",
+    "Employer":"/components/employer/employer"
   },
   "navigationBarTitleText": "个人中心",
   "navigationStyle":"custom"

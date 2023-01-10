@@ -18,9 +18,15 @@
     "pages/personHome/personHome",
     "components/indexBar/inderBar",
     "pages/success/success",
-    "pages/employer/employer",
     "pages/message/message",
-    "pages/messageDetail/messageDetail"
+    "pages/messageDetail/messageDetail",
+    "components/pickUpPackage/pickUpPackage",
+    "components/employer/employer",
+    "pages/employerRealName/employerRealName",
+    "pages/publish/publish",
+    "pages/projectManagement/projectManagement",
+    "pages/wholePack/wholePack",
+    "pages/subcontract/subcontract"
   ],
   "window": {
     "backgroundTextStyle": "light",

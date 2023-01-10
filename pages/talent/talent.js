@@ -1,5 +1,5 @@
 // pages/talent/talent.js
-const { apiUrl } = require("../js/apiUrl")
+const { apiUrl } = require("../../js/apiUrl")
 Page({
 
   /**

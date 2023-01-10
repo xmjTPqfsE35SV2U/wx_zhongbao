@@ -2,11 +2,9 @@
 <view>
   <!-- 标题栏 -->
   <indexBar title="个人主页"></indexBar>
-  
   <!-- <div class="h-88 boder_b_solid margin-l-32 margin-r-32">
       <div class="fn-size-28 h-88 h-ln-88">个人优势</div>
   </div> -->
-
   <view class="bg-col-F3F3F3">
     <!-- 个人优势 -->
     <view class="bg-col-FFFFFF">
