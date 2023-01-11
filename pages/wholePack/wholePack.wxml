@@ -45,12 +45,16 @@
       <view class="margin-t-20 bg-col-FFFFFF">
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">项目预算：</view>
-          <view class="flex-grow-1">
-            
-            
-            <!-- <span class="selctTag font-24">公开竞标项目</span>
-            <span class="margin-l-20 unTag font-24">保密竞标项目</span> -->
+          <view bindtap="showBudget" class="flex-grow-1">
+            <input class="w-100-100 h-100 ln-h-100" disabled value="{{budget}}" placeholder="请选择项目预算" />
           </view>
+          <!-- 展示项目预算 -->
+          <van-action-sheet
+            show="{{ show }}"
+            actions="{{ actions }}"
+            bind:close="onClose"
+            bind:select="onSelect"
+          />
         </view>
         <!-- 是否开发票 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
@@ -100,7 +104,7 @@
         </view>
       </view>
       <!-- 项目描述 -->
-      <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="margin-t-20 padding-b-20 bg-col-FFFFFF">
         <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">项目描述：</view>
         </view>

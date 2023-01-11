@@ -24,8 +24,49 @@ Page({
     // 控制是否选中的样式 0：公开 1：保密  
     secrecy:0,
     // 是否开票
-    isinvoice:true
+    isinvoice:true,
+    // 项目预算弹窗
+    show: false,
+
+    // 项目预算
+    budget:"",
+    actions: [
+      {
+        name: '可议价',
+      },
+      {
+        name: '1千-5千',
+      },
+      {
+        name: '5千-1万',
+      },
+      {
+        name: '1万-10万',
+      }
+    ],
+
   },
+
+
+  // 项目预算
+  showBudget(){
+    this.setData({
+      show:true
+    })
+  },
+  // 关闭
+  onClose() {
+    this.setData({ show: false });
+  },
+  // 选择
+  onSelect(event) {
+    this.setData({
+      budget:event.detail.name
+    })
+    // console.log(event.detail.name);
+  },
+
+
 
   onSubmit(){
     console.log(this.data.secrecy)
