@@ -38,16 +38,34 @@ Page({
     }
   },
 
+  // 项目详情页
+  goProjectDetail(){
+    wx.navigateTo({
+      url: '/pages/projectDetail/projectDetail',
+    })
+  },
+  // 达人详情页
+  goTalentDetail(){
+    wx.navigateTo({
+      url: '/pages/talentDetail/talentDetail',
+    })
+  },
+
+  // 
   onChange(event) {
     wx.showToast({
       title: `切换到标签 ${event.detail.name}`,
       icon: 'none',
     });
   },
+  // 初始化数据
   onLoad() {
     this.getHotProject()
     this.getHotTanlent()
   },
+
+
+
   // 获取热门项目
   getHotProject(){
     let that = this

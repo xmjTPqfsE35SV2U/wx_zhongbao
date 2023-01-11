@@ -1,0 +1,75 @@
+<!--pages/talentDetail/talentDetail.wxml-->
+<view style="min-height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 标题栏 -->
+  <indexBar title="达人详情"></indexBar>
+  <!-- 项目 -->
+  <view class="bg-col-FFFFFF padding-40">
+    <view>
+      <view class="flex-row">
+        <view>
+          <image class="w-90 h-90 border-radius-50" src="/image/user_logo.jpg"></image>
+        </view>
+        <view class="margin-l-20 flex-grow-1">
+          <view class="">
+            <view class="font-w-900 flex-row space-between">
+              <view>达达软件</view>
+              <view class="font-28 col-FF0000">￥500/天</view>
+            </view>
+            <view class="margin-t-20">
+              <view class="font-28">接单状态：<span class="col-606060">可接单</span></view>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+    </view>
+    <!-- <view class="margin-t-40 flex-row font-28">
+      <view class="projectItem text-c">
+        <view class="font-w-900">￥800</view>
+        <view class="col-606060 margin-t-20">雇属费用</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">15天</view>
+        <view class="col-606060 margin-t-20">项目周期</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">Android</view>
+        <view class="col-606060 margin-t-20">项目分类</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">整包项目</view>
+        <view class="col-606060 margin-t-20">项目类型</view>
+      </view>
+    </view> -->
+  </view>
+  <!-- 基本信息 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900">基本信息</view>
+    <view class="margin-t-20">
+      <van-tag type="primary" size="large">测试工程师 | 中级</van-tag>
+    </view>
+    <view class="margin-t-20 font-28">
+      可工作的时间：<span class="col-606060">工作日8:00-18:00</span>
+    </view>
+    <view class="flex-row space-between relative">
+      <view>
+        <view class="margin-t-20 font-28">
+          承接项目数：<span class="col-606060">20</span>
+        </view>
+        <view class="margin-t-20 font-28">
+          项目完成率：<span class="col-606060">50%</span>
+        </view>
+      </view>
+      <!-- 邀请投标 -->
+      <view style="text-align: right;">
+        <van-button round type="info" size="small">邀请投标</van-button>
+      </view>
+    </view>
+    
+    
+  </view>
+  <!--  -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    
+  </view>
+</view>

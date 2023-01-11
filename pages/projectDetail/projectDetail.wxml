@@ -1,0 +1,54 @@
+<!--pages/projectDetail/projectDetail.wxml-->
+<view style="min-height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 标题栏 -->
+  <indexBar title="项目详情"></indexBar>
+  <!-- 项目 -->
+  <view class="bg-col-FFFFFF padding-40">
+    <view>
+      <view class="font-w-900">短视频直播软件</view>
+    </view>
+    <view class="flex-row margin-t-20 space-between">
+      <view class="font-24 col-606060">更新时间：01-10 10:10
+      </view>
+      <view class="font-24 col-FF0000">竞标中</view>
+    </view>
+    <view class="margin-t-40 flex-row font-28">
+      <view class="projectItem text-c">
+        <view class="font-w-900">￥800</view>
+        <view class="col-606060 margin-t-20">雇属费用</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">15天</view>
+        <view class="col-606060 margin-t-20">项目周期</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">Android</view>
+        <view class="col-606060 margin-t-20">项目分类</view>
+      </view>
+      <view class="projectItem text-c">
+        <view class="font-w-900">整包项目</view>
+        <view class="col-606060 margin-t-20">项目类型</view>
+      </view>
+    </view>
+  </view>
+  <!-- 项目描述 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900">项目描述</view>
+    <view class="font-28 margin-t-20">开发直播软件，类似抖音直播小程序，用户可直播带货</view>
+    <view class="margin-t-20" style="text-align: right;">
+      <van-button round type="info" size="small">我要竞标</van-button>
+    </view>
+  </view>
+  <!-- 竞标列表 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900 margin-b-40">竞标列表</view>
+    <view class="flex-row flex-wrap">
+      <view wx:for="{{projectList}}" class="margin-t-20 flex-shrink-0 flex-column align-items-center" style="flex-basis: 33%;">
+        <view class="">
+          <image class="w-64 h-64 border-radius-50" src="/image/user_logo.jpg"></image>
+        </view>
+        <view class="margin-t-10">匿名投标</view>
+      </view>
+    </view>
+  </view>
+</view>

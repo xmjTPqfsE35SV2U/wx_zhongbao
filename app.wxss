@@ -133,6 +133,13 @@
 .padding-b-40{
   padding-bottom: 40rpx;
 }
+
+/*  */
+.padding-40{
+  padding: 40rpx;
+}
+
+
 .font-64{
   font-size: 64rpx !important;
 }
@@ -175,6 +182,9 @@
 .h-80{
   height: 80rpx;
 }
+.h-90{
+  height: 90rpx;
+}
 .h-160{
   height: 160rpx;
 }
@@ -196,6 +206,9 @@
 .ln-h-60{
   line-height: 60rpx;
 }
+.ln-h-90{
+  line-height: 90rpx;
+}
 .ln-h-100{
   line-height: 100rpx;
 }
@@ -211,6 +224,9 @@
 }
 .w-80{
   width: 80rpx;
+}
+.w-90{
+  width: 90rpx;
 }
 
 .w-530{
@@ -271,6 +287,11 @@
 .display-none{
   display: none;
 }
+
+.relative{
+  position: relative;
+}
+
 
 
 .container {

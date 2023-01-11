@@ -1,5 +1,4 @@
 <!--pages/talent/talent.wxml-->
-<!--pages/project/project.wxml-->
 <view style="height: 100vh;background-color: #F3F3F3;">
   <!-- 标题栏 -->
   <indexBar title="达人"></indexBar>

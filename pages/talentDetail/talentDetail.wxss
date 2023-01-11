@@ -1,0 +1,9 @@
+/* pages/talentDetail/talentDetail.wxss */
+.border-right-2{
+  border-right: 4rpx solid #F3F3F3;
+}
+
+.projectItem{
+  flex-shrink: 0;
+  flex: 1;
+}
