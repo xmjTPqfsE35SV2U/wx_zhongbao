@@ -28,6 +28,9 @@
 .col-0777DE{
   color: #0777DE;
 }
+.col-00FF00{
+  color: #00FF00;
+}
 .col-FF8A00{
   color: #FF8A00;
 }
@@ -145,6 +148,12 @@
 .font-24{
   font-size: 24rpx !important;
 }
+
+.font-w-900{
+  font-weight: 900;
+}
+
+
 .text-c{
   text-align: center;
 }
@@ -221,6 +230,8 @@
   flex-shrink: 0;
 }
 
+
+
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -243,6 +254,10 @@
 .justify-content-center{
   justify-content: center;
 }
+.justify-content-right{
+  justify-content: right;
+}
+
 .space-between{
   justify-content: space-between;
 }

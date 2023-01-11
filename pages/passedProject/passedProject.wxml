@@ -1,7 +1,7 @@
-<!--pages/subcontract/subcontract.wxml-->
+<!--pages/passedProject/passedProject.wxml-->
 <view>
   <!-- 标题栏 -->
-  <indexBar title="分包项目"></indexBar>
+  <indexBar title="我的项目"></indexBar>
   <view class="bg-col-F3F3F3">
     <form>
       <!-- 项目标题栏目 -->
@@ -9,21 +9,14 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">项目标题：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入项目标题" />
+            <view class="w-100-100 h-100 ln-h-100">{{projectName}}</view>
           </view>
         </view>
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">分包类型：</view>
           <view bindtap="subcontractType" class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" disabled value="{{subcontractType}}" placeholder="请选择分包类型" />
+            <input class="w-100-100 h-100 ln-h-100" disabled value="{{subcontractType}}" />
           </view>
-          <!-- 展示项目预算 -->
-          <van-action-sheet
-            show="{{ showSubcontractType }}"
-            actions="{{ actions1 }}"
-            bind:close="onClose"
-            bind:select="onSelectSubcontract"
-          />
         </view>
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">保密设置：</view>
@@ -59,16 +52,9 @@
       <view class="margin-t-20 bg-col-FFFFFF">
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">项目预算：</view>
-          <view bindtap="showBudget" class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" disabled value="{{budget}}" placeholder="请选择项目预算" />
+          <view class="flex-grow-1">
+            <view class="w-100-100 h-100 ln-h-100">{{budget}}</view>
           </view>
-          <!-- 展示项目预算 -->
-          <van-action-sheet
-            show="{{ show }}"
-            actions="{{ actions2 }}"
-            bind:close="onClose"
-            bind:select="onSelect"
-          />
         </view>
         <!-- 是否开发票 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
@@ -90,7 +76,7 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">期望工期：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入工期" />
+            <view class="w-100-100 h-100 ln-h-100">{{expectedDuration}}天</view>
           </view>
         </view>
       </view>
@@ -99,59 +85,41 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">联系人：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系人" />
+            <view class="w-100-100 h-100 ln-h-100">{{userName}}</view>
           </view>
         </view>
         <!-- 联系电话 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">联系电话：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系电话" />
+            <view class="w-100-100 h-100 ln-h-100">{{phone}}</view>
           </view>
         </view>
         <!-- 邮箱 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">邮箱：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入邮箱" />
+            <view class="w-100-100 h-100 ln-h-100">{{email}}</view>
           </view>
         </view>
       </view>
       <!-- 项目描述 -->
-      <view class="margin-t-20 bg-col-FFFFFF">
+      <view class="margin-t-20 padding-b-20 bg-col-FFFFFF">
         <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">项目描述：</view>
         </view>
         <view class="margin-l-32 margin-r-32 textInputBox">
-          <textarea placeholder="对项目进行描述" class="padding-20"></textarea>
+          <view class="padding-20">{{projectDescription}}</view>
         </view>
       </view>
       <!-- 添加附件 -->
       <view class="bg-col-FFFFFF margin-t-20">
         <view class="flex-row padding-t-20 justify-content-center padding-b-20">
-          <view class="addRound">
-            <image class="w-100-100 h-100-100" src="/image/add.png"></image>
-          </view>
-          <view class="font-28 col-606060" style="line-height: 48rpx;">添加附件</view>
+          <view class="font-28 col-606060" style="line-height: 48rpx;">查看附件</view>
         </view>
-      </view>
-      <!-- 平台提示 -->
-      <view class="margin-t-20 padding-t-20 padding-b-20 padding-l-32 padding-r-32 bg-col-FFFFFF font-24 col-909090">
-        <view>温馨提示：</view>
-        <view class="margin-t-20 ln-h-48"> 1、请提供详细的项目资料，以便于我们为您推荐合适的开发者。</view>
-        <view class="ln-h-48">  2、整包项目收费标准：需要收取15%的平台服务费。</view>
-        <view class="ln-h-48">  3、项目发布之后，平台工作人员将在半个工作日内联系您。</view>
-      </view>
-      <!-- 平台协议 -->
-      <view class="margin-t-20 flex-row justify-content-center">
-        <van-checkbox shape="square" icon-size="28rpx" value="{{ agreementCheck }}" bind:change="agreementOn">
-          <span class="col-909090 font-24">我已阅读《xxx众包平台项目发布协议》</span>
-        </van-checkbox>
-      </view>
-      <!-- 提交 -->
-      <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="">
-        <van-button bind:click="onSubmit" size="large" type="info">发布项目</van-button>
       </view>
     </form>
   </view>
 </view>
+
+

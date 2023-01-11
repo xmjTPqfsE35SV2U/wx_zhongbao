@@ -1,3 +1,79 @@
 <!--pages/projectManagement/projectManagement.wxml-->
-<text>pages/projectManagement/projectManagement.wxml</text>
-<view>项目管理</view>
+<view class="bg-col-F3F3F3" style="min-height: 100vh;">
+  <!-- 标题栏 -->
+  <indexBar title="我的项目"></indexBar>
+  <view>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <!-- 审核中 -->
+      <van-tab title="审核中">
+        <view style="padding:20rpx">
+          <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
+            <view>
+              <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
+            </view>
+            <view class="margin-l-20 flex-grow-1">
+              <view>123</view>
+              <view class="flex-row space-between">
+                <view>
+                  <view style="line-height: 50rpx;" class="margin-t-20 font-28 col-909090">项目分类：整包项目</view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">当前环节：</span><span class="col-0777DE">审核中</span></view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">发布时间：</span><span>2022-01-11</span></view>
+                  </view>
+                  <view class="flex-row margin-t-30">
+                    <van-button bindtap="goAuditProject" size="small" plain type="info">查看详情</van-button>
+                  </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <!-- 审核通过 -->
+      <van-tab title="审核通过">
+        <view style="padding:20rpx">
+          <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
+            <view>
+              <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
+            </view>
+            <view class="margin-l-20 flex-grow-1">
+              <view>123</view>
+              <view class="flex-row space-between">
+                <view>
+                  <view style="line-height: 50rpx;" class="margin-t-20 font-28 col-909090">项目分类：整包项目</view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">当前环节：</span><span class="col-0777DE">审核通过</span></view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">发布时间：</span><span>2022-01-11</span></view>
+                  </view>
+                  <view class="flex-row margin-t-30">
+                    <van-button bindtap="goPassedProject" size="small" plain type="info">查看详情</van-button>
+                  </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <!-- 已完成 -->
+      <van-tab title="已完成">
+        <view style="padding:20rpx">
+          <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
+            <view>
+              <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
+            </view>
+            <view class="margin-l-20 flex-grow-1">
+              <view>123</view>
+              <view class="flex-row space-between">
+                <view>
+                  <view style="line-height: 50rpx;" class="margin-t-20 font-28 col-909090">项目分类：整包项目</view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">当前环节：</span><span class="col-0777DE">已完成</span></view>
+                  <view style="line-height: 50rpx;" class="font-28"><span class="font-w-900">发布时间：</span><span>2022-01-11</span></view>
+                  </view>
+                  <view class="flex-row margin-t-30">
+                    <van-button bindtap="goFinishProject" size="small" plain type="info">查看详情</van-button>
+                  </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>
+

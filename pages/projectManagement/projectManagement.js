@@ -5,9 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    myProjectList:[
+      {},
+      {},
+      {},
+      {}
+    ]
   },
-
+  // 审核中
+  goAuditProject(){
+    wx.navigateTo({
+      url: '/pages/auditProject/auditProject',
+    })
+  },
+  // 审核通过
+  goPassedProject(){
+    wx.navigateTo({
+      url: '/pages/passedProject/passedProject',
+    })
+  },
+  // 项目完成
+  goFinishProject(){
+    wx.navigateTo({
+      url: '/pages/finishProject/finishProject',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

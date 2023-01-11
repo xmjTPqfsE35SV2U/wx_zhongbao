@@ -1,0 +1,37 @@
+/* pages/finishProject/finishProject.wxss */
+.selctTag{
+  border: 2rpx solid #539FED;
+  padding: 8rpx 12rpx;
+  border-radius: 60rpx;
+  color: #539FED;
+}
+/* 未选中 */
+.unTag{
+  border: 2rpx solid #C4C4C4;
+  padding: 8rpx 12rpx;
+  border-radius: 60rpx;
+  color: #C4C4C4;
+}
+/*  */
+.tagBox{
+  flex-shrink: 0;
+  flex-basis: 25%;
+}
+/* 文本输入栏 */
+.textInputBox{
+  border: 2rpx dashed #C4C4C4;
+  border-radius: 8rpx;
+}
+.textInputBox>view{
+  min-height: 280rpx;
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Icon */
+.addRound{
+  height: 48rpx;
+  width: 48rpx;
+  border-radius: 50%;
+}
