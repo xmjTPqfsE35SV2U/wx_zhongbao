@@ -21,7 +21,7 @@ Page({
   // 审核通过
   goPassedProject(){
     wx.navigateTo({
-      url: '/pages/passedProject/passedProject',
+      url: '/pages/projectDetail/projectDetail',
     })
   },
   // 项目完成

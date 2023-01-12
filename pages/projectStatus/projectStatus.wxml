@@ -2,7 +2,7 @@
 <view style="height: 100vh;" class="bg-col-F3F3F3">
   <!-- 标题栏 -->
   <indexBar title="项目状态"></indexBar>
-  <view wx:for="{{ProjectList}}" wx:key="user_id" class="bg-col-FFFFFF margin-b-20 padding-l-32 padding-r-32 padding-t-40 padding-b-40">
+  <view wx:for="{{ProjectList}}" wx:key="user_id" bindtap="goProjectDetail" class="bg-col-FFFFFF margin-b-20 padding-l-32 padding-r-32 padding-t-40 padding-b-40">
     <view class="flex-row space-between">
         <view class="font-28 col-0777DE">{{item[1].package_name}}</view>
         <view class="font-28 col-FF8A00">{{item[5].budget}}万</view>
@@ -32,7 +32,6 @@
                 <view class="font-24 col-909090">{{item[2].NickName[0].NickName}}</view>
             </view>
         </view>
-
         <view>
           <span class="col-909090 font-24">竞标结束</span>
           <span class="margin-l-24 bg-col-909090 col-FFFFFF font-24 border-radius-20 padding-l-20 padding-r-20 padding-t-7 padding-b-7">未中标</span>

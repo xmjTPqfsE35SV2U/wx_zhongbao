@@ -19,7 +19,6 @@
               <view class="font-28">接单状态：<span class="col-606060">可接单</span></view>
             </view>
           </view>
-          
         </view>
       </view>
     </view>
@@ -61,15 +60,43 @@
         </view>
       </view>
       <!-- 邀请投标 -->
-      <view style="text-align: right;">
-        <van-button round type="info" size="small">邀请投标</van-button>
+      <view style="position: absolute;bottom: 0;right: 0;">
+        <van-button bindtap="invitationBid" round type="info" size="small">邀请投标</van-button>
       </view>
     </view>
-    
-    
   </view>
-  <!--  -->
+  <!-- 弹窗提示 -->
+  <van-dialog id="van-dialog" />
+  <!-- 轻提示 -->
+  <van-toast id="van-toast" />
+  <!-- 个人优势 -->
   <view class="bg-col-FFFFFF padding-40 margin-t-20">
-    
+    <view class="font-w-900">个人优势</view>
+    <view class="margin-t-20 ln-h-60">{{personalStrengths}}</view>
+  </view>
+  <!-- 工作经历 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900">工作经历</view>
+    <view class="margin-t-20">北京**有限公司 | 算法工程</view>
+    <!-- <view class="margin-t-20">学历：本科</view> -->
+    <view class="margin-t-20">部门：技术部</view>
+    <view class="margin-t-20">在职时间：2022-10-10至2022-11-11</view>
+    <view class="margin-t-20">工作内容：</view>
+    <view class="margin-t-20">{{personalStrengths}}</view>
+  </view>
+  <!-- 教育经历 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900">教育经历</view>
+    <view class="margin-t-20">北京**学校 | 本科</view>
+    <!-- <view class="margin-t-20">学历：本科</view> -->
+    <view class="margin-t-20">专业：甲骨文文学</view>
+    <view class="margin-t-20">在校时间：2022-10-10至2022-11-11</view>
+    <view class="margin-t-20">在校经历：</view>
+    <view class="margin-t-20">{{personalStrengths}}</view>
+  </view>
+  <!-- 作品简介 -->
+  <view class="bg-col-FFFFFF padding-40 margin-t-20">
+    <view class="font-w-900">作品简介</view>
+    <view class="margin-t-20">众包小程序</view>
   </view>
 </view>

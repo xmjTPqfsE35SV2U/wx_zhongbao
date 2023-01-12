@@ -1,46 +1,24 @@
-// pages/biddingProjects/biddingProjects.js
-const { apiUrl } = require("../../js/apiUrl")
+// pages/myBidding/myBidding.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ProjectList:[]
+
   },
-  // 获取热门项目
-  getHotProject(){
-    let that = this
-    wx.request({
-      url: apiUrl+'/show_hot_project',
-      method:"get",
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res){
-        if(res.data.code == 1){
-          that.setData({
-            ProjectList:res.data.data
-          })
-          console.log(that.data.ProjectList)
-        }else{
-          console.log("请求失败")
-        }
-      }
+  // 
+  submit(){
+    wx.redirectTo({
+      url: '/pages/success/success',
     })
   },
 
-  // 项目详情
-  goProjectDetail(){
-    wx.navigateTo({
-      url: '/pages/projectDetail/projectDetail',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getHotProject()
+
   },
 
   /**

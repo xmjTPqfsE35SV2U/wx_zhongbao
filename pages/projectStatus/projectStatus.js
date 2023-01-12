@@ -9,6 +9,12 @@ Page({
     ProjectList:[]
   },
 
+  goProjectDetail(){
+    wx.navigateTo({
+      url: '/pages/projectDetail/projectDetail',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

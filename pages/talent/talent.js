@@ -77,6 +77,15 @@ Page({
     this.selectComponent('#item3').toggle();
   },
 
+
+  // 达人详情页
+  goTalentDetail(){
+    wx.navigateTo({
+      url: '/pages/talentDetail/talentDetail',
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

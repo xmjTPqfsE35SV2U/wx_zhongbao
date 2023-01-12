@@ -36,7 +36,7 @@
     <view class="font-w-900">项目描述</view>
     <view class="font-28 margin-t-20">开发直播软件，类似抖音直播小程序，用户可直播带货</view>
     <view class="margin-t-20" style="text-align: right;">
-      <van-button round type="info" size="small">我要竞标</van-button>
+      <van-button bindtap="goMyBidding" round type="info" size="small">我要竞标</van-button>
     </view>
   </view>
   <!-- 竞标列表 -->

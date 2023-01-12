@@ -32,11 +32,9 @@
                 <view class="font-24 col-909090">{{item[2].NickName[0].NickName}}</view>
             </view>
         </view>
-
-        <!-- <view>
-          <van-button size="small" round type="info">取消竞标</van-button>
-        </view> -->
-
+        <view class="flex-row align-items-center">
+          <view bindtap="goProjectDetail" class="border-radius-20 padding-l-20 padding-r-20 padding-t-7 padding-b-7 tx-c font-24 col-FFFFFF bg-col-FF8A00">查看详情</view>
+        </view>
     </view>
   </view>
 

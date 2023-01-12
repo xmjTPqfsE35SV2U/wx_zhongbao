@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    // 控制竞标弹出层
+    biddingShow:false,
     projectList:[
       {},
       {},
@@ -12,6 +15,13 @@ Page({
       {},
       {},
     ]
+  },
+
+  // 我要竞标
+  goMyBidding(){
+    wx.navigateTo({
+      url: '/pages/myBidding/myBidding',
+    })
   },
 
   /**

@@ -29,9 +29,9 @@
     "pages/subcontract/subcontract",
     "pages/auditProject/auditProject",
     "pages/finishProject/finishProject",
-    "pages/passedProject/passedProject",
     "pages/projectDetail/projectDetail",
-    "pages/talentDetail/talentDetail"
+    "pages/talentDetail/talentDetail",
+    "pages/myBidding/myBidding"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -91,6 +91,9 @@
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
     "van-action-sheet": "@vant/weapp/action-sheet/index",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-popup": "@vant/weapp/popup/index"
   }
 }
