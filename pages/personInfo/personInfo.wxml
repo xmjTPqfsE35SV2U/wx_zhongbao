@@ -9,7 +9,7 @@
       <view class="margin-l-32 margin-r-32 margin-t-10">
         <van-uploader bind:after-read="afterRead" >
           <view class="userImg">
-            <image class="w-100-100 h-100-100 border-radius-50" src="{{userImg==''?'/image/user_logo.jpg':userImg.url}}" />
+            <image class="user border-radius-50" src="{{userImg==''?'/image/user_logo.jpg':userImg.url}}" />
           </view>
         </van-uploader>
       </view>
@@ -18,7 +18,7 @@
   <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
     <view class="flex-row align-items-center">姓名：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" value="{{name}}" placeholder="输入姓名" />
+      <input class="w-100-100 h-100 ln-h-100" value="{{name}}" placeholder="输入姓名" placeholder-class="placeholder-style" />
     </view>
   </view>
   <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
@@ -37,12 +37,12 @@
   <view class="border-bottom h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
     <view class="flex-row align-items-center">邮箱：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" value="{{eamil}}" placeholder="输入邮箱" />
+      <input class="w-100-100 h-100 ln-h-100" value="{{eamil}}" placeholder="输入邮箱" placeholder-class="placeholder-style" />
     </view>
   </view>
 
   <!-- 提交 -->
-  <view style="margin-top: 120rpx; padding-bottom: 120rpx;" class="margin-l-32 margin-r-32">
+  <view style="margin-top: 120rpx; padding-bottom: 120rpx;">
     <van-button bind:click="submit" size="large" type="info">保存</van-button>
   </view>
 

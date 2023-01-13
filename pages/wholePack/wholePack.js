@@ -1,4 +1,5 @@
 // pages/wholePack/wholePack.js
+import Toast from '@vant/weapp/toast/toast';
 Page({
 
   /**
@@ -9,9 +10,9 @@ Page({
     projectName:"",
     // 平台协议
     agreementCheck:false,
-    // 项目类型
+    // 项目类型列表
     projectTypeList:[
-      { id:0, text:"Android",isCheck:true },
+      { id:0, text:"Android",isCheck:false },
       { id:1,text:"小程序开发",isCheck:false },
       { id:10,text:"后台系统",isCheck:false },
       { id:3,text:"ISO开发",isCheck:false },
@@ -23,13 +24,24 @@ Page({
     ],
     // 控制是否选中的样式 0：公开 1：保密  
     secrecy:0,
-    // 是否开票
-    isinvoice:true,
-    // 项目预算弹窗
-    show: false,
-
+    // 项目类型
+    projectType:[],
     // 项目预算
     budget:"",
+    // 是否开票
+    isinvoice:true,
+    // 期望工期
+    expectedDuration:"",
+    // 联系人
+    contact:"",
+    // 联系电话
+    phone:"",
+    // 邮箱
+    email:"",
+    // 项目描述
+    projectDescription:"",
+    // 项目预算弹窗
+    show: false,
     actions: [
       {
         name: '可议价',
@@ -47,7 +59,6 @@ Page({
 
   },
 
-
   // 项目预算
   showBudget(){
     this.setData({
@@ -64,13 +75,6 @@ Page({
       budget:event.detail.name
     })
     // console.log(event.detail.name);
-  },
-
-
-
-  onSubmit(){
-    console.log(this.data.secrecy)
-    console.log(123)
   },
 
   // 选择保密设置
@@ -94,11 +98,16 @@ Page({
   // 是否开票
   invoiceCheck(e){
     console.log(e.detail.value)
-    
     this.setData({
       isinvoice:e.detail.value==1?true:false
     })
-    // console.log("123")
+  },
+
+  // 项目类型改变触发
+  projectTypeChange(event){
+    this.setData({
+      projectType:event.detail.value
+    })
   },
 
   // 平台协议状态
@@ -107,6 +116,65 @@ Page({
       agreementCheck:!this.data.agreementCheck
     })
   },
+
+  // 提交
+  onSubmit(){
+    // console.log(this.data.projectName)
+    // console.log(this.data.secrecy)
+    // console.log(this.data.projectType)
+    // console.log(this.data.budget)
+    // console.log(this.data.isinvoice)
+    // console.log(this.data.expectedDuration)
+    // console.log(this.data.contact)
+    // console.log(this.data.phone)
+    // console.log(this.data.email)
+    // console.log(this.data.projectDescription)
+    if(this.data.projectName==""){
+      Toast('项目标题不能为空');
+      return;
+    }
+    if(this.data.projectType.length==0){
+      Toast('项目类型至少选择一项');
+      return;
+    }
+    if(this.data.budget==""){
+      Toast('项目预算不能为空');
+      return;
+    }
+    if(this.data.expectedDuration==""){
+      Toast('期望工期不能为空');
+      return;
+    }
+    if(this.data.contact==""){
+      Toast('联系人不能为空');
+      return;
+    }
+    if(this.data.phone==""){
+      Toast('联系电话不能为空');
+      return;
+    }
+    if(this.data.email==""){
+      Toast('邮箱不能为空');
+      return;
+    }
+    if(this.data.projectDescription==""){
+      Toast('项目描述不能为空');
+      return;
+    }
+    if(this.data.agreementCheck==false){
+      Toast('请先同意平台协议');
+      return;
+    }
+
+    wx.redirectTo({
+      url: '/pages/success/success',
+    })
+
+  },
+
+  // 空函数
+  tempBack(){},
+
   /**
    * 生命周期函数--监听页面加载
    */

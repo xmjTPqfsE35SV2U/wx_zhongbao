@@ -1,0 +1,18 @@
+<!--pages/opus/opus.wxml-->
+<view style="min-height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 专业技能 -->
+  <indexBar title="专业技能"></indexBar>
+  <view class="bg-col-FFFFFF">
+    <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center">专业技能：</view>
+    </view>
+    <!--  -->
+    <view class="margin-l-32 margin-r-32 textInputBox">
+      
+    </view>
+    <!-- 提交 -->
+    <view style="padding-top: 40rpx; padding-bottom: 20rpx;" class="">
+      <van-button bind:click="submit" size="large" type="info">确定</van-button>
+    </view>
+  </view>
+</view>

@@ -17,17 +17,20 @@ Page({
       result: [],
     },
     // 职位等级
-    option3: {
-      list: ['初级', '中级','高级'],
-      result: [],
-    },
+    option3: [
+      { title:'初级',name:'0' },
+      { title:'中级',name:'1' },
+      { title:'高级',name:'2' }
+    ],
+    // 职位 0:初级 1：中级 2：高级
+    jobRadio:'0',
+
     // 达人列表
     tanlentList:[]
   },
 
   // 改变
   onChange1(event) {
-    // console.log(1)
     this.setData({
       ['option1.result']:event.detail
     });
@@ -38,11 +41,7 @@ Page({
       ['option2.result']:event.detail
     });
   },
-  onChange3(event) {
-    this.setData({
-      ['option3.result']:event.detail
-    });
-  },
+
   // 选择
   toggle1(event) {
     const { index } = event.currentTarget.dataset;
@@ -55,10 +54,20 @@ Page({
     const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
     checkboxs[1].toggle();
   },
-  toggle3(event) {
-    const { index } = event.currentTarget.dataset;
-    const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
-    checkboxs[2].toggle();
+
+
+  // 
+  jobRankChange(event){
+    this.setData({
+      jobRadio: event.detail,
+    });
+  },
+
+  jobRankClick(event){
+    const { name } = event.currentTarget.dataset;
+    this.setData({
+      jobRadio: name,
+    });
   },
 
 

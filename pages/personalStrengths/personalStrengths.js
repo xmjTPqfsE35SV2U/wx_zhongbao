@@ -1,44 +1,24 @@
-// pages/accountPassword/accountPassword.js
-import Dialog from '@vant/weapp/dialog/dialog';
-import Toast from '@vant/weapp/toast/toast';
+// pages/personalStrengths/personalStrengths.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    password:"",
-    confirmPassword:""
+    personalStrengths:""
   },
   // 提交
   submit(){
-    // 确认修改密码
-    if(this.data.password==""){
-      Toast('密码不能为空');
-      return;
-    }
-    if(this.data.confirmPassword==""){
-      Toast('确认密码不能为空');
-      return;
-    }
-    if(this.data.password!==this.data.confirmPassword){
-      Toast('两次密码不一致');
-      return;
-    }
-    Dialog.confirm({
-      title: '提示',
-      message: '此操作将覆盖原密码，是否修改账号密码',
-    })
-    .then(() => {
-      // on confirm
-      wx.redirectTo({
-        url: '/pages/success/success',
-      })
-    })
-    .catch(() => {
-      // on cancel
+    let pages = getCurrentPages();
+    let prevPage = pages[pages.length -2]; //上一个页面
+    prevPage.setData({
+      advantageText:this.data.personalStrengths
+    });
+    wx.navigateBack({
+      delta: 1,
     });
   },
+
   // 空函数
   tempBack(){},
   /**

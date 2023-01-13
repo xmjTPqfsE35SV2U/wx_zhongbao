@@ -1,12 +1,33 @@
 // pages/feedBack/feedBack.js
+import Toast from '@vant/weapp/toast/toast';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // 标题
+    title:"",
+    // 内容
+    contentText:"",
   },
+
+  // 空函数
+  tempBack(){},
+
+  // 提交
+  submit(){
+    if(this.data.title == ""){
+      Toast('标题不能为空');
+    }else if(this.data.contentText == ""){
+      Toast('反馈内容不能为空');
+    }else{
+      wx.redirectTo({
+        url: '/pages/success/success',
+      })
+    }
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

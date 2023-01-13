@@ -1,12 +1,12 @@
 <!--pages/talent/talent.wxml-->
 <view style="height: 100vh;background-color: #F3F3F3;">
   <!-- 标题栏 -->
-  <indexBar title="达人"></indexBar>
+  <indexBar title="达人" homeTop="true"></indexBar>
   <!-- 搜索 -->
   <van-search shape="round" style="border-radius: 20rpx;" value="{{ value }}" placeholder="请输入搜索关键词" />
-  <!-- 筛选列表 -->
+  <!-- 技能专长 -->
   <van-dropdown-menu>
-    <van-dropdown-item id="item1" title="项目类型">
+    <van-dropdown-item id="item1" title="技能专长">
         <van-checkbox-group value="{{ option1.result }}" bind:change="onChange1">
           <van-cell-group>
             <van-cell
@@ -59,27 +59,15 @@
         </van-button>
       </view>
     </van-dropdown-item>
-    <!-- 项目状态 -->
-    <van-dropdown-item id="item3" title="项目状态">
-      <van-checkbox-group value="{{ option3.result }}" bind:change="onChange3">
+    <!-- 职位等级 -->
+    <van-dropdown-item id="item3" title="职位等级">
+      <van-radio-group value="{{ jobRadio }}" bind:change="jobRankChange">
         <van-cell-group>
-          <van-cell
-            wx:for="{{ option3.list }}"
-            wx:key="index"
-            title="{{ item }}"
-            value-class="value-class"
-            clickable
-            data-index="{{ index }}"
-            bind:click="toggle3"
-          >
-            <van-checkbox
-              catch:tap="noop"
-              class="checkboxes-{{ index }}"
-              name="{{ item }}"
-            />
+          <van-cell wx:for="{{option3}}" title="{{item.title}}" clickable data-name="{{item.name}}" bind:click="jobRankClick">
+            <van-radio slot="right-icon" name="{{item.name}}" />
           </van-cell>
         </van-cell-group>
-      </van-checkbox-group>
+      </van-radio-group>
       <view style="padding: 5px 16px;">
         <van-button type="danger" block round bind:click="onConfirm3">
           确认

@@ -15,5 +15,8 @@ App({
   },
   globalData: {
     userInfo: null,
-  }
+  },
+  // 空函数 解决双向绑定的警告提示
+  tempBack:function(){} 
+
 })

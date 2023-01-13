@@ -31,7 +31,11 @@
     "pages/finishProject/finishProject",
     "pages/projectDetail/projectDetail",
     "pages/talentDetail/talentDetail",
-    "pages/myBidding/myBidding"
+    "pages/myBidding/myBidding",
+    "pages/personalStrengths/personalStrengths",
+    "pages/workExperience/workExperience",
+    "pages/educationalExperience/educationalExperience",
+    "pages/opus/opus"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -94,6 +98,7 @@
     "van-tag": "@vant/weapp/tag/index",
     "van-dialog": "@vant/weapp/dialog/index",
     "van-toast": "@vant/weapp/toast/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "van-notify": "@vant/weapp/notify/index"
   }
 }

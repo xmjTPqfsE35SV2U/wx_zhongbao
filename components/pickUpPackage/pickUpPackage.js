@@ -36,9 +36,8 @@ Component({
     // 切换发包方
     hardPackage(){
       store.store.switchPackage = false
-      wx.redirectTo({
-        url: '/pages/person/person',
-      })
+      // 调用父组件的方法
+      this.triggerEvent("parentComponentFunction");
     },
   },
 

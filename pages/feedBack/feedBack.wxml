@@ -4,19 +4,20 @@
   <indexBar title="问题反馈"></indexBar>
   <!-- 标题 -->
   <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-    <view class="flex-row align-items-center">标题：</view>
+    <view class="flex-row align-items-center"><span class="col-FF0000">*</span>标题：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" value="{{password}}" placeholder="请输入标题" />
+      <input class="w-100-100 h-100 ln-h-100" model:value="{{title}}" bindinput="tempBack" placeholder="请输入标题" placeholder-class="placeholder-style" />
     </view>
   </view>
   <!-- 内容 -->
-  <view class="h-100 ln-h-100 margin-l-32 margin-r-32">内容：</view>
+  <view class="h-100 ln-h-100 margin-l-32 margin-r-32"><span class="col-FF0000">*</span>内容：</view>
   <view class="margin-l-32 margin-r-32 textInputBox">
-    <textarea placeholder="对平台的问题进行描述" class="padding-20"></textarea>
+    <textarea placeholder="对平台的问题进行描述" placeholder-class="placeholder-style" model:value="{{contentText}}" bindinput="tempBack" class="padding-20"></textarea>
   </view>
+  <!-- 提示 -->
+  <van-toast id="van-toast" />
   <!-- 提交 -->
   <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="btnSubmit">
     <van-button bind:click="submit" size="large" type="info">确定</van-button>
   </view>
-
 </view>

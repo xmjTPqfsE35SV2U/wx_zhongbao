@@ -1,32 +1,10 @@
-// pages/myBidding/myBidding.js
-import Toast from '@vant/weapp/toast/toast';
+// pages/opus/opus.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // 竞标价格
-    biddingPrice:"",
-    // 竞标宣言
-    biddingProclamation:""
-  },
-  // 提交
-  submit(){
-    if(this.data.biddingPrice == ""){
-      Toast('竞标价格不能为空');
-    }else if(this.data.biddingProclamation == ""){
-      Toast('竞标宣言不能为空');
-    }else{
-      // 成功
-      wx.redirectTo({
-        url: '/pages/success/success',
-      })
-    }
-  },
-
-  // 空函数 绑定值改变时触发
-  tempFun(){
 
   },
 

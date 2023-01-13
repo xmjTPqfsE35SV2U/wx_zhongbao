@@ -8,6 +8,12 @@ Page({
   data: {
     packageStatus:""
   },
+  // 父方法
+  parentComponentFunction() {
+    // 刷新本页
+    this.onLoad();
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

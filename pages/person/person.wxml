@@ -1,10 +1,9 @@
 <!--pages/person/person.wxml-->
 <view style="background-color: #F3F3F3;">
   <!-- 标题栏 -->
-  <indexBar title="个人中心"></indexBar>
-
-  <PickUpPackage wx:if="{{packageStatus}}"></PickUpPackage>
-  <Employer wx:else></Employer>
+  <indexBar title="个人中心" homeTop="true"></indexBar>
+  <PickUpPackage wx:if="{{packageStatus}}" bind:parentComponentFunction="parentComponentFunction"></PickUpPackage>
+  <Employer wx:else bind:parentComponentFunction="parentComponentFunction"></Employer>
 </view>
 
 

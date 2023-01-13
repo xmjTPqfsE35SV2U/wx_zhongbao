@@ -7,13 +7,13 @@
       <!-- 项目标题栏目 -->
       <view class="bg-col-FFFFFF padding-b-40">
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">项目标题：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>项目标题：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入项目标题" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{projectName}}" bindinput="tempBack" placeholder="请输入项目标题" />
           </view>
         </view>
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">保密设置：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>保密设置：</view>
           <view class="flex-grow-1">
             <label for="public">
               <span class="{{secrecy==0?'selctTag font-24':'unTag font-24'}}">公开竞标项目</span>
@@ -25,13 +25,14 @@
         </view>
         <!-- 项目类型 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">项目类型：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>项目类型：</view>
         </view>
         <view class="margin-l-32 margin-r-32">
-          <checkbox-group class="flex-row flex-wrap" bindchange="">
-            <label style="display: block;" class="tagBox margin-t-40" wx:for="{{projectTypeList}}">
+          <checkbox-group class="flex-row flex-wrap" bind:change="projectTypeChange">
+            <label style="display: block;" class="tagBox margin-t-40" wx:for="{{projectTypeList}}"
+            bindtap="projectTypeCheck" data-id="{{item.id}}" >
               <checkbox style="display: none;" value="{{item.text}}" />
-              <span bindtap="projectTypeCheck" data-id="{{item.id}}" class="{{item.isCheck==true?'margin-t-20 selctTag font-24':'margin-t-20 unTag font-24'}}">{{item.text}}</span>
+              <span class="{{item.isCheck==true?'margin-t-20 selctTag font-24':'margin-t-20 unTag font-24'}}">{{item.text}}</span>
             </label>
           </checkbox-group>
         </view>
@@ -44,7 +45,7 @@
       <!-- 项目预算栏目 -->
       <view class="margin-t-20 bg-col-FFFFFF">
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">项目预算：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>项目预算：</view>
           <view bindtap="showBudget" class="flex-grow-1">
             <input class="w-100-100 h-100 ln-h-100" disabled value="{{budget}}" placeholder="请选择项目预算" />
           </view>
@@ -58,7 +59,7 @@
         </view>
         <!-- 是否开发票 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">是否需要开票：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>是否需要开票：</view>
           <view class="flex-grow-1">
             <radio-group bindchange="invoiceCheck">
               <label>
@@ -74,42 +75,43 @@
         </view>
         <!-- 期望工期 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">期望工期：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>期望工期：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入工期" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{expectedDuration}}" bindinput="tempBack" placeholder="请输入工期" />
           </view>
+          <view>天</view>
         </view>
       </view>
       <!-- 联系人栏目 -->
       <view class="margin-t-20 bg-col-FFFFFF">
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">联系人：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>联系人：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系人" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{contact}}" bindinput="tempBack" placeholder="请输入联系人" />
           </view>
         </view>
         <!-- 联系电话 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">联系电话：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>联系电话：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入联系电话" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{phone}}" bindinput="tempBack" placeholder="请输入联系电话" />
           </view>
         </view>
         <!-- 邮箱 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">邮箱：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>邮箱：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" value="{{projectName}}" placeholder="请输入邮箱" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{email}}" bindinput="tempBack" placeholder="请输入邮箱" />
           </view>
         </view>
       </view>
       <!-- 项目描述 -->
       <view class="margin-t-20 padding-b-20 bg-col-FFFFFF">
         <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
-          <view class="flex-row align-items-center">项目描述：</view>
+          <view class="flex-row align-items-center"><span class="col-FF0000">*</span>项目描述：</view>
         </view>
         <view class="margin-l-32 margin-r-32 textInputBox">
-          <textarea placeholder="对项目进行描述" class="padding-20"></textarea>
+          <textarea placeholder="对项目进行描述" model:value="{{projectDescription}}" bindinput="tempBack" class="padding-20"></textarea>
         </view>
       </view>
       <!-- 添加附件 -->
@@ -134,6 +136,8 @@
           <span class="col-909090 font-24">我已阅读《xxx众包平台项目发布协议》</span>
         </van-checkbox>
       </view>
+      <!-- 提示 -->
+      <van-toast id="van-toast" />
       <!-- 提交 -->
       <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="">
         <van-button bind:click="onSubmit" size="large" type="info">发布项目</van-button>

@@ -1,4 +1,5 @@
 // pages/personRealName/personRealName.js
+import Toast from '@vant/weapp/toast/toast';
 
 Page({
   /**
@@ -13,9 +14,7 @@ Page({
     frontoIdCardUrl:"",
     // 反面
     reverseSideIdCard:"",
-
-    // 提示
-    tips:""
+  
   },
   afterRead(event){
     const { file } = event.detail;
@@ -32,24 +31,16 @@ Page({
   },
   // 实名提交
   submit(){
+    // console.log(this.data.cardID.length)
     // 格式暂未确定
-    console.log(this.data.username)
-    console.log(this.data.cardID)
-    console.log(this.data.frontoIdCardUrl)
-    console.log(this.data.reverseSideIdCard)
-
     if(this.data.username == ""){
-      this.setData({
-        tips:"提示：用户名错误"
-      })
+      Toast('用户名不能为空');
     }else if(this.data.cardID == ""){
-      this.setData({
-        tips:"提示：身份证号错误"
-      })
+      Toast('身份证号不能为空');
+    }else if(this.data.cardID.length !== 18){
+      Toast('身份证号必须为18位');
     }else if(this.data.frontoIdCardUrl == "" || this.data.reverseSideIdCard == ""){
-      this.setData({
-        tips:"提示：身份证照错误"
-      })
+      Toast('请上传身份证正反面');
     }else{
       // 通过
       wx.redirectTo({
@@ -58,6 +49,10 @@ Page({
     }
 
   },
+
+
+  // 空函数
+  tempBack(){},
 
   /**
    * 生命周期函数--监听页面加载

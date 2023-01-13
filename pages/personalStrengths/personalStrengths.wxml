@@ -1,0 +1,19 @@
+<!--pages/personalStrengths/personalStrengths.wxml-->
+<!-- <text>pages/personalStrengths/personalStrengths.wxml</text> -->
+<view style="min-height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 个人优势 -->
+  <indexBar title="个人优势"></indexBar>
+  <view class="bg-col-FFFFFF">
+    <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center">内容：</view>
+    </view>
+    <!--  -->
+    <view class="margin-l-32 margin-r-32 textInputBox">
+      <textarea placeholder="请输入个人优势" class="padding-20" model:value="{{personalStrengths}}" bindinput="tempBack"></textarea>
+    </view>
+    <!-- 提交 -->
+    <view style="padding-top: 40rpx; padding-bottom: 20rpx;" class="">
+      <van-button bind:click="submit" size="large" type="info">确定</van-button>
+    </view>
+  </view>
+</view>

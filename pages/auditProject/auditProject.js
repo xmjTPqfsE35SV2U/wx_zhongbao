@@ -109,9 +109,11 @@ Page({
     })
   },
 
-
+  // 提交
   onSubmit(){
-    console.log(this.data.secrecy)
+    wx.redirectTo({
+      url: '/pages/success/success',
+    })
     console.log(123)
   },
 

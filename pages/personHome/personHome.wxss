@@ -26,3 +26,7 @@
   top: calc(50% - 32rpx);
   left: calc(50% - 32rpx);
 }
+
+.value-class {
+  flex: none !important;
+}

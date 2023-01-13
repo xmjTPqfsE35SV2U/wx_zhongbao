@@ -109,10 +109,13 @@ Page({
     })
   },
 
-
+  // 提交
   onSubmit(){
-    console.log(this.data.secrecy)
-    console.log(123)
+    // console.log(this.data.secrecy)
+    // console.log(123)
+    wx.redirectTo({
+      url: '/pages/success/success',
+    })
   },
 
   // 选择保密设置

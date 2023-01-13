@@ -3,10 +3,10 @@
   <!-- 标题栏 -->
   <indexBar title="我的项目"></indexBar>
   <view>
-    <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tabs active="{{ active }}" bind:change="onChange" swipeable>
       <!-- 审核中 -->
       <van-tab title="审核中">
-        <view style="padding:20rpx">
+        <view>
           <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
             <view>
               <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
@@ -29,7 +29,7 @@
       </van-tab>
       <!-- 审核通过 -->
       <van-tab title="审核通过">
-        <view style="padding:20rpx">
+        <view>
           <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
             <view>
               <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>
@@ -52,7 +52,7 @@
       </van-tab>
       <!-- 已完成 -->
       <van-tab title="已完成">
-        <view style="padding:20rpx">
+        <view>
           <view wx:for="{{myProjectList}}" class="flex-row bg-col-FFFFFF margin-b-20" style="padding:30rpx;border-radius: 10rpx;">
             <view>
               <image class="w-80 h-80 border-radius-50" src="/image/user_logo.jpg"></image>

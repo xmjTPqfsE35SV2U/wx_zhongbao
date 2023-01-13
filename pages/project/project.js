@@ -4,6 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 项目状态 0 竞标中 1竞标结束
+    radio: '0',
     // 项目类型
     option1: {
       list: ['Android', 'ios','小程序','web网站','其它'],
@@ -14,11 +16,7 @@ Page({
       list: ['UI美工', '前端开发','后端开发','运维工程师','测试工程师'],
       result: [],
     },
-    // 项目状态
-    option3: {
-      list: ['竞标中', '竞标结束'],
-      result: [],
-    },
+    
     // 项目列表
     ProjectList:[],
 
@@ -36,11 +34,6 @@ Page({
       ['option2.result']:event.detail
     });
   },
-  onChange3(event) {
-    this.setData({
-      ['option3.result']:event.detail
-    });
-  },
   // 选择
   toggle1(event) {
     const { index } = event.currentTarget.dataset;
@@ -53,12 +46,20 @@ Page({
     const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
     checkboxs[1].toggle();
   },
-  toggle3(event) {
-    const { index } = event.currentTarget.dataset;
-    const checkboxs = this.selectAllComponents(`.checkboxes-${index}`);
-    checkboxs[2].toggle();
-  },
 
+  // 竞标状态
+  bidStatusChange(event) {
+      this.setData({
+        radio: event.detail,
+      });
+  },
+  // 
+  bidStatusClick(event) {
+    const { name } = event.currentTarget.dataset;
+    this.setData({
+      radio: name,
+    });
+  },
 
   // 确认
   onConfirm1(){
@@ -74,6 +75,14 @@ Page({
   onConfirm3(){
     this.selectComponent('#item3').toggle();
   },
+
+  // 项目详情
+  goProjectDetail(){
+    wx.navigateTo({
+      url: '/pages/projectDetail/projectDetail',
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

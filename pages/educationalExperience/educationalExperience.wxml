@@ -1,0 +1,80 @@
+<!--pages/educationalExperience/educationalExperience.wxml-->
+<view style="min-height: 100vh;" class="bg-col-F3F3F3">
+  <!-- 教育经历 -->
+  <indexBar title="教育经历"></indexBar>
+  <view class="bg-col-FFFFFF">
+    <!-- <view class="h-100 ln-h-100 margin-l-32 margin-r-32 border-bottom-2">工作经历</view> -->
+    <!-- 学校名称 -->
+    <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>学校名称：</view>
+      <view class="flex-grow-1">
+        <input class="w-100-100 h-100 ln-h-100" model:value="{{schoolName}}" bindinput="tempBack" placeholder="请输入学校名称" />
+      </view>
+    </view>
+    <!-- 学历 -->
+    <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>学历：</view>
+      <view class="flex-grow-1">
+        <input class="w-100-100 h-100 ln-h-100" model:value="{{degree}}" bindinput="tempBack" placeholder="请输入学历" />
+      </view>
+    </view>
+    <!-- 专业 -->
+    <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>专业：</view>
+      <view class="flex-grow-1">
+        <input class="w-100-100 h-100 ln-h-100" model:value="{{specialized}}" bindinput="tempBack" placeholder="请输入专业" />
+      </view>
+    </view>
+    <!-- 入校时间 -->
+    <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>入校时间：</view>
+      <view class="flex-grow-1">
+        <input bindtap="selectOnboardingTime" class="w-100-100 h-100 ln-h-100" disabled value="{{onboardingTime}}" placeholder="请选择入校时间" />
+      </view>
+    </view>
+    <!-- 离校时间 -->
+    <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>离校时间：</view>
+      <view class="flex-grow-1">
+        <input bindtap="selectDimissionTime" class="w-100-100 h-100 ln-h-100" disabled value="{{dimissionTime}}" placeholder="请选择离校时间" />
+      </view>
+    </view>
+    <!-- 在校经历 -->
+    <view class="h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
+      <view class="flex-row align-items-center"><span class="col-FF0000">*</span>在校经历：</view>
+    </view>
+    <view class="margin-l-32 margin-r-32 textInputBox">
+      <textarea placeholder="在校期间获得的荣誉" model:value="{{schoolContent}}" bindinput="tempBack" class="padding-20"></textarea>
+    </view>
+    <!-- 提交 -->
+    <view style="padding-top: 40rpx; padding-bottom: 20rpx;" class="">
+      <van-button bind:click="submit" size="large" type="info">确定</van-button>
+    </view>
+    <!-- 在校时间弹出窗 -->
+    <van-popup show="{{ showBoarding }}" position="bottom" bind:close="onClose">
+      <van-datetime-picker
+        type="date"
+        value="{{ currentDate }}"
+        min-date="{{ minDate }}"
+        formatter="{{ formatter }}"
+        bind:confirm="boardingConfirm"
+        bind:cancel="boardingCancel"
+      />
+    </van-popup>
+    <!-- 离校时间弹出窗 -->
+    <van-popup show="{{ showDimission }}" position="bottom" bind:close="onClose">
+      <van-datetime-picker
+        type="date"
+        value="{{ currentDate }}"
+        min-date="{{ minDate }}"
+        formatter="{{ formatter }}"
+        bind:confirm="dimissionConfirm"
+        bind:cancel="boardingCancel"
+      />
+    </van-popup>
+    <!-- 提示 -->
+    <van-toast id="van-toast" />
+  </view>
+</view>
+
+

@@ -3,6 +3,10 @@ Component({
     title: {
       type: String,
       value: '',
+    },
+    homeTop:{
+      type:Boolean,
+      value:false
     }
   },
 
