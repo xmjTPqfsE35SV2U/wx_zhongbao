@@ -40,6 +40,10 @@ Page({
     email:"",
     // 项目描述
     projectDescription:"",
+    // 附件文本
+    fileText:"",
+    // 附件
+    attachmentsFile:{},
     // 项目预算弹窗
     show: false,
     actions: [
@@ -109,6 +113,36 @@ Page({
       projectType:event.detail.value
     })
   },
+
+  // 添加附件
+  addAttachments(){
+    console.log(123)
+    let that = this
+    if(that.data.fileText==""){
+      // 从聊天框中选择文件 
+      wx.chooseMessageFile({
+        count: 1,
+        success(res){
+          console.log(res)
+          that.setData({
+            fileText:res.tempFiles[0].name,
+            attachmentsFile:res.tempFiles[0]
+          })
+        }
+      })
+    }else{
+      Toast('最多只能添加一个附件');
+      return;
+    }
+    
+  },
+  // 删除附件
+  deleteFile(){
+    this.setData({
+      fileText:""
+    })
+  },
+
 
   // 平台协议状态
   agreementOn(){

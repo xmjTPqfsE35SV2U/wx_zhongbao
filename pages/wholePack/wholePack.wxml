@@ -115,13 +115,20 @@
         </view>
       </view>
       <!-- 添加附件 -->
-      <view class="bg-col-FFFFFF margin-t-20">
-        <view class="flex-row padding-t-20 justify-content-center padding-b-20">
+      <view  class="bg-col-FFFFFF margin-t-20">
+        <view bindtap="addAttachments" class="flex-row padding-t-20 justify-content-center padding-b-20">
           <view class="addRound">
             <image class="w-100-100 h-100-100" src="/image/add.png"></image>
           </view>
           <view class="font-28 col-606060" style="line-height: 48rpx;">添加附件</view>
         </view>
+        <view wx:if="{{fileText==''?false:true}}" class="fileBox bg-col-FFFFFF margin-b-20 ln-h-60 flex-row space-between">
+          <view>
+            <van-icon name="orders-o" />{{fileText}}
+          </view>
+          <van-icon class="fileDetele" bind:click="deleteFile" name="cross" />
+        </view>
+        <view class="bg-col-FFFFFF" style="height: 4rpx;"></view>
       </view>
       <!-- 平台提示 -->
       <view class="margin-t-20 padding-t-20 padding-b-20 padding-l-32 padding-r-32 bg-col-FFFFFF font-24 col-909090">

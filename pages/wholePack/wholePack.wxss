@@ -36,3 +36,13 @@
   width: 48rpx;
   border-radius: 50%;
 }
+.fileBox{
+  /* padding-top: 20rpx; */
+  /* height: 80rpx; */
+  line-height: 80rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.fileDetele:hover{
+  color: #539FED !important;
+}
