@@ -4,7 +4,7 @@
   <!-- 标题栏 -->
   <indexBar title="首页" homeTop="true"></indexBar>
   <!-- 搜索 -->
-  <van-search shape="round" style="border-radius: 20rpx;" value="{{ value }}" placeholder="请输入搜索关键词" />
+  <van-search shape="round" placeholder-class="placeholder-style" style="border-radius: 20rpx;" value="{{ value }}" placeholder="请输入搜索关键词" />
   <!-- <view class="bg-col-FFFFFF padding-t-20 padding-b-20">
     <view class="search w-530 h-60 margin-0-auto bg-col-F3F3F3">
       <input placeholder="项目搜索" style="justify-content: space-between;" class="margin-l-32 h-60 ln-h-60 flex-row align-items-center">

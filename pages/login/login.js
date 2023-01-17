@@ -14,28 +14,30 @@ Page({
   login(){
     console.log(this.data.phone)
     console.log(this.data.password)
-    wx.request({
-      url: api.apiUrl+'/login',
-      method:"post",
-      data:{
-        phone:this.data.phone,
-        password:this.data.password
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res){
-        console.log(res)
-      }
+    // wx.request({
+    //   url: api.apiUrl+'/login',
+    //   method:"post",
+    //   data:{
+    //     phone:this.data.phone,
+    //     password:this.data.password
+    //   },
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success(res){
+    //     console.log(res)
+    //   }
+    // })
+    wx.switchTab({
+      url: '/pages/index/index',
     })
-
     
     
   },
   // 去注册
   goRegister(){
     wx.redirectTo({
-      url: api.apiUrl+'/pages/register/register',
+      url: '/pages/register/register',
     })
   },
 

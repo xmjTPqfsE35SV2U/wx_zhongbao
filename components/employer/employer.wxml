@@ -34,7 +34,7 @@
       <van-button bindtap="hardPackage" size="large" custom-class="btn bg-col-FFFFFF" type="default">切换为接包方</van-button>
     </view>
     <view class="margin-t-12">
-      <van-button size="large" custom-class="bg-col-FFFFFF" type="default">退出登录</van-button>
+      <van-button bindtap="exit" size="large" custom-class="bg-col-FFFFFF" type="default">退出登录</van-button>
     </view>
     <!-- 占位元素 -->
     <view class="bg-col-F3F3F3" style="height:20rpx"></view>

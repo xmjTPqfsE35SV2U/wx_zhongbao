@@ -39,6 +39,12 @@ Component({
       // 调用父组件的方法
       this.triggerEvent("parentComponentFunction");
     },
+    // 退出登录
+    exit(){
+      wx.redirectTo({
+        url: '/pages/login/login',
+      })
+    },
   },
 
   /**

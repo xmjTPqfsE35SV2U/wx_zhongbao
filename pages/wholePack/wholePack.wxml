@@ -47,7 +47,7 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center"><span class="col-FF0000">*</span>项目预算：</view>
           <view bindtap="showBudget" class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" disabled value="{{budget}}" placeholder="请选择项目预算" />
+            <input class="w-100-100 h-100 ln-h-100" disabled value="{{budget}}" placeholder="请选择项目预算" placeholder-class="placeholder-style" />
           </view>
           <!-- 展示项目预算 -->
           <van-action-sheet
@@ -77,7 +77,7 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center"><span class="col-FF0000">*</span>期望工期：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" model:value="{{expectedDuration}}" bindinput="tempBack" placeholder="请输入工期" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{expectedDuration}}" bindinput="tempBack" placeholder="请输入工期" placeholder-class="placeholder-style" />
           </view>
           <view>天</view>
         </view>
@@ -87,21 +87,21 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center"><span class="col-FF0000">*</span>联系人：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" model:value="{{contact}}" bindinput="tempBack" placeholder="请输入联系人" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{contact}}" bindinput="tempBack" placeholder="请输入联系人" placeholder-class="placeholder-style" />
           </view>
         </view>
         <!-- 联系电话 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center"><span class="col-FF0000">*</span>联系电话：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" model:value="{{phone}}" bindinput="tempBack" placeholder="请输入联系电话" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{phone}}" bindinput="tempBack" placeholder="请输入联系电话" placeholder-class="placeholder-style" />
           </view>
         </view>
         <!-- 邮箱 -->
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center"><span class="col-FF0000">*</span>邮箱：</view>
           <view class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" model:value="{{email}}" bindinput="tempBack" placeholder="请输入邮箱" />
+            <input class="w-100-100 h-100 ln-h-100" model:value="{{email}}" bindinput="tempBack" placeholder="请输入邮箱" placeholder-class="placeholder-style" />
           </view>
         </view>
       </view>

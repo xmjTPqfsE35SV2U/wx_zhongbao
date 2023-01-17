@@ -20,7 +20,7 @@ Page({
     // 控制：项目 -- 达人 
     selectOn:true,
     // 热门项目
-    ProjectList:[{},{}],
+    ProjectList:[],
     // 热门达人
     TanlentList:[]
   },

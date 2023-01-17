@@ -8,28 +8,28 @@
     <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
       <view class="flex-row align-items-center"><span class="col-FF0000">*</span>公司：</view>
       <view class="flex-grow-1">
-        <input class="w-100-100 h-100 ln-h-100" model:value="{{companyName}}" bindinput="tempBack" placeholder="请输入公司名" />
+        <input class="w-100-100 h-100 ln-h-100" model:value="{{companyName}}" bindinput="tempBack" placeholder="请输入公司名" placeholder-class="placeholder-style" />
       </view>
     </view>
     <!-- 部门 -->
     <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
       <view class="flex-row align-items-center"><span class="col-FF0000">*</span>部门：</view>
       <view class="flex-grow-1">
-        <input class="w-100-100 h-100 ln-h-100" model:value="{{department}}" bindinput="tempBack" placeholder="请输入所在部门" />
+        <input class="w-100-100 h-100 ln-h-100" model:value="{{department}}" bindinput="tempBack" placeholder="请输入所在部门" placeholder-class="placeholder-style" />
       </view>
     </view>
     <!-- 入职时间 -->
     <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
       <view class="flex-row align-items-center"><span class="col-FF0000">*</span>入职时间：</view>
       <view class="flex-grow-1">
-        <input bindtap="selectOnboardingTime" class="w-100-100 h-100 ln-h-100" disabled value="{{onboardingTime}}" placeholder="请选择入职时间" />
+        <input bindtap="selectOnboardingTime" class="w-100-100 h-100 ln-h-100" disabled value="{{onboardingTime}}" placeholder="请选择入职时间" placeholder-class="placeholder-style" />
       </view>
     </view>
     <!-- 离职时间 -->
     <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
       <view class="flex-row align-items-center"><span class="col-FF0000">*</span>离职时间：</view>
       <view class="flex-grow-1">
-        <input bindtap="selectDimissionTime" class="w-100-100 h-100 ln-h-100" disabled value="{{dimissionTime}}" placeholder="请选择离职时间" />
+        <input bindtap="selectDimissionTime" class="w-100-100 h-100 ln-h-100" disabled value="{{dimissionTime}}" placeholder="请选择离职时间" placeholder-class="placeholder-style" />
       </view>
     </view>
     <!-- 工作内容 -->

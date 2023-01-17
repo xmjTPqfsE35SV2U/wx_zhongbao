@@ -15,7 +15,8 @@
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
           <view class="flex-row align-items-center">分包类型：</view>
           <view bindtap="subcontractType" class="flex-grow-1">
-            <input class="w-100-100 h-100 ln-h-100" disabled value="{{subcontractType}}" />
+            <view class="w-100-100 h-100 ln-h-100">{{subcontractType}}</view>
+            <!-- <input class="w-100-100 h-100 ln-h-100" disabled value="{{subcontractType}}" /> -->
           </view>
         </view>
         <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
@@ -114,13 +115,24 @@
       </view>
       <!-- 添加附件 -->
       <view class="bg-col-FFFFFF margin-t-20">
-        <view class="flex-row padding-t-20 justify-content-center padding-b-20">
-          <!-- <view class="addRound">
-            <image class="w-100-100 h-100-100" src="/image/add.png"></image>
-          </view> -->
-          <view class="font-28 col-606060" style="line-height: 48rpx;">查看附件</view>
+        <view class="fileBox bg-col-FFFFFF ln-h-60 flex-row space-between">
+          <view class="flex-row">
+            附件：
+            <!-- 下载附件，未获取服务端的数据，暂未提供下载功能 -->
+            <view bindtap="downloadFile">
+              <van-icon name="orders-o" />
+              <span style="margin-left:4rpx;">{{'123.txt'}}</span>
+            </view>
+          </view>
         </view>
+        <!-- <view class="flex-row padding-t-20 justify-content-center padding-b-20">
+          <view class="addRound">
+            <image class="w-100-100 h-100-100" src="/image/add.png"></image>
+          </view>
+          <view class="font-28 col-606060" style="line-height: 48rpx;">查看附件</view>
+        </view> -->
       </view>
+      
       <!-- 提交 -->
       <view style="padding-top: 20rpx; padding-bottom: 20rpx;" class="">
         <van-button bind:click="onSubmit" size="large" type="danger">删除记录</van-button>

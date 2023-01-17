@@ -1,16 +1,67 @@
 // pages/register/register.js
+let api = require("../../js/apiUrl")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 账号
+    phone:"",
+    // 密码
+    password:"",
 
+    showCaptcha:true,
+    timer:60
   },
-  // 
+  // 去登录
   goLogin(){
     wx.redirectTo({
       url: '/pages/login/login',
+    })
+  },
+
+  // 发送验证码
+  captcha(){
+    this.setData({
+      showCaptcha:false
+    })
+    let that = this
+    let timer = setInterval(function(){
+      if(that.data.timer>1){
+        that.setData({
+          timer:that.data.timer-1
+        })
+        console.log(that.data.timer)
+      }else{
+        clearInterval(timer)
+        that.setData({
+          showCaptcha:true,
+          timer:60
+        })
+      }
+    },1000)
+
+
+  },
+
+  // 注册
+  register(){
+    // 状态419，请求后端权限
+    wx.request({
+      url: api.apiUrl+"/reg",
+      method:"post",
+      data:{
+        phone:this.data.phone,
+        password:this.data.password
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        // console.log(res)
+      },
+      
     })
   },
   /**

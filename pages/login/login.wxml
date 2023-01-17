@@ -1,11 +1,13 @@
 <!--pages/login/login.wxml-->
 <view class="bg-col-F3F3F3" style="height: 100vh;">
+  <!-- 标题栏 -->
+  <indexBar title="" homeTop="true"></indexBar>
   <view class="bg-col-0777DE h-380 ln-h-380 font-64 col-FFFFFF text-c">**众包</view>
   <view class="bg-col-FFFFFF margin-t-60 margin-l-32 margin-r-32 padding-b-40 padding-l-18 padding-r-18">
-    <view class="h-100 ln-h-100 fn-32 flex-row border-bottom-2">
+    <view class="h-100 ln-h-100 fn-32 flex-row padding-t-20 border-bottom-2">
       账号：<input type="number" model:value="{{phone}}" class="h-100 ln-h-100" />
     </view>
-    <view class="h-100 ln-h-100 fn-32 flex-row margin-t-40 border-bottom-2">
+    <view class="h-100 ln-h-100 fn-32 flex-row margin-t-20 border-bottom-2">
       密码：<input model:value="{{password}}" class="h-100 ln-h-100" />
     </view>
     <view class="margin-t-20">

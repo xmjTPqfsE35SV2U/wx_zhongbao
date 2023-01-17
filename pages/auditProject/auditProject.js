@@ -1,4 +1,6 @@
 // pages/auditProject/auditProject.js
+const { apiUrl } = require("../../js/apiUrl")
+
 Page({
   /**
    * 页面的初始数据
@@ -106,6 +108,22 @@ Page({
   onSelectSubcontract(event){
     this.setData({
       subcontractType:event.detail.name
+    })
+  },
+
+  // 下载附件
+  downloadFile(){
+    console.log(123)
+    wx.downloadFile({
+      url: apiUrl+'/images/pc/frontoIdCard.png',
+      success(res){
+        console.log(res)
+        console.log(31)
+      },
+      fail(res){
+        console.log(res)
+        console.log("err")
+      }
     })
   },
 

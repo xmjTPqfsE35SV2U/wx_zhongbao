@@ -3,3 +3,8 @@
   border: 2px solid #0777DE;
   border-radius: 4rpx;
 }
+
+.border-2{
+  /* background-color: #F3F3F3; */
+  border: 2px solid #F3F3F3;
+}

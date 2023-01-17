@@ -5,13 +5,13 @@
   <view class="border-bottom margin-l-32 margin-r-32 flex-row">
     <view class="flex-row align-items-center"><span class="col-FF0000">*</span>企业名称：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" model:value="{{enterpriseName}}" bindinput="tempBack" placeholder="请输入企业名称" />
+      <input class="w-100-100 h-100 ln-h-100" model:value="{{enterpriseName}}" bindinput="tempBack" placeholder="请输入企业名称" placeholder-class="placeholder-style" />
     </view>
   </view>
   <view class="border-bottom margin-l-32 margin-r-32 flex-row">
     <view class="flex-row align-items-center"><span class="col-FF0000">*</span>统一社会信用代码：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" model:value="{{creditCode}}" bindinput="tempBack" placeholder="请输入社会信用代码" />
+      <input class="w-100-100 h-100 ln-h-100" model:value="{{creditCode}}" bindinput="tempBack" placeholder="请输入社会信用代码" placeholder-class="placeholder-style" />
     </view>
   </view>
   <view class="margin-l-32 margin-r-32 flex-row h-100 ln-h-100">

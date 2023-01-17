@@ -7,7 +7,7 @@
   <view class="border-bottom-2 h-100 ln-h-100 margin-l-32 margin-r-32 flex-row">
     <view class="flex-row align-items-center"><span class="col-FF0000">*</span>竞标价格：</view>
     <view class="flex-grow-1">
-      <input class="w-100-100 h-100 ln-h-100" type="number" model:value="{{biddingPrice}}" bindinput="tempFun" placeholder="请输入价格" />
+      <input class="w-100-100 h-100 ln-h-100" type="number" model:value="{{biddingPrice}}" bindinput="tempFun" placeholder="请输入价格" placeholder-class="placeholder-style" />
     </view>
     <view>元</view>
   </view>
